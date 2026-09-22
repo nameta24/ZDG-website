@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zameen Dost Group | Buy Direct. Verified Prices. Islamabad &amp; Rawalpindi</title>
     <meta name="description" content="Zameen Dost Group gives you verified plot sizes, payment plans and master plans for Faisal Town Phase 1 &amp; 2, Faisal Hills, Faisal Heights and Rudn Enclave. Call or WhatsApp +92 339 9992222.">
-    <meta name="theme-color" content="#0d1b2e">
+    <meta name="theme-color" content="#0a0c10">
+    <link rel="icon" type="image/jpeg" href="files/Logo.jpeg">
 
     <meta property="og:title" content="Zameen Dost Group: Buy Direct. Verified Prices.">
     <meta property="og:description" content="Verified project information, payment plans and master plans across leading developments in Islamabad and Rawalpindi.">
@@ -13,19 +14,19 @@
 
     <style>
         :root {
-            --navy-950: #0a1526;
-            --navy-900: #0d1b2e;
-            --navy-800: #132538;
-            --navy-700: #1c3350;
-            --navy-600: #2a4665;
+            --navy-950: #06070a;
+            --navy-900: #0a0c10;
+            --navy-800: #13161c;
+            --navy-700: #1e232c;
+            --navy-600: #2d3440;
             --paper: #f6f3ec;
             --paper-dim: #ece7da;
             --ink: #15202b;
             --ink-soft: #4a5768;
-            --gold: #b98a3d;
-            --gold-bright: #d6a856;
+            --gold: #b68d4c;
+            --gold-bright: #e2bd80;
             --line: #dcd5c4;
-            --line-dark: #26405e;
+            --line-dark: #2a2f38;
             --maroon: #5c1a24;
             --font-display: "Fraunces","Iowan Old Style",Georgia,serif;
             --font-body: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -50,7 +51,7 @@
         body {
             font-family: var(--font-body);
             background: var(--paper);
-            color: var(--gold-bright);
+            color: var(--ink);
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
@@ -186,98 +187,77 @@
             position: sticky;
             top: 0;
             z-index: 200;
-            background: rgba(10,21,38,.92);
+            background: rgba(255,255,255,.97);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,.08);
+            border-bottom: 1px solid var(--line);
         }
 
         .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 78px
+            height: 78px;
+            gap: 24px
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: #fff
+            flex-shrink: 0
         }
 
-        .brand-mark {
-            width: 40px;
-            height: 40px;
-            border: 1.5px solid var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-display);
-            font-size: 16px;
-            color: var(--gold);
-            flex-shrink: 0;
-        }
-
-        .brand-word {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.15
-        }
-
-            .brand-word b {
-                font-family: var(--font-display);
-                font-size: 18px;
-                letter-spacing: .02em
-            }
-
-            .brand-word span {
-                font-size: 10px;
-                letter-spacing: .18em;
-                color: #9fb0c4
+            .brand img {
+                height: 40px;
+                width: auto;
+                display: block
             }
 
         nav.primary {
             display: flex;
-            gap: 34px
+            gap: 32px
         }
 
             nav.primary a {
                 font-size: 14px;
-                color: #d7dee7;
+                color: var(--ink);
                 font-weight: 500;
                 position: relative;
                 padding: 6px 0
             }
 
                 nav.primary a:hover {
-                    color: #fff
+                    color: var(--gold)
                 }
 
         .header-cta {
             display: flex;
             align-items: center;
-            gap: 12px
+            gap: 16px
         }
 
         .header-phone {
             display: flex;
             flex-direction: column;
             text-align: right;
-            color: #fff;
+            color: var(--ink);
             font-size: 13px
         }
+
+            .header-phone span {
+                color: var(--ink-soft)
+            }
 
             .header-phone a {
                 font-family: var(--font-display);
                 font-size: 16px;
-                color: var(--gold-bright)
+                color: var(--navy-900)
             }
 
         .mobile-toggle {
             display: none;
             background: none;
             border: none;
-            color: #fff;
+            color: var(--ink);
             font-size: 24px
         }
 
@@ -326,58 +306,131 @@
             }
         }
 
+        /* ===== Floating WhatsApp button ===== */
+        .wa-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 250;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,.35);
+            transition: transform .2s ease;
+        }
+
+            .wa-float:hover {
+                transform: scale(1.08)
+            }
+
+            .wa-float svg {
+                width: 28px;
+                height: 28px
+            }
+
+        @media(max-width:600px) {
+            .wa-float {
+                right: 16px;
+                bottom: 16px;
+                width: 50px;
+                height: 50px
+            }
+        }
+
         /* ===== Hero ===== */
         .hero {
-            background: var(--navy-950);
             position: relative;
-            padding-top: 56px
+            overflow: hidden;
+            background: var(--navy-950);
+            min-height: 640px;
+            display: flex;
+            align-items: center;
         }
 
-        .hero-copy {
-            max-width: 760px;
-            margin: 0 auto 40px;
-            text-align: center;
-            padding: 0 28px
+        .hero-media {
+            position: absolute;
+            inset: 0;
+            z-index: 0
         }
 
-            .hero-copy .eyebrow-plain {
-                justify-content: center;
-                display: flex;
-                letter-spacing: .16em;
+            .hero-media video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block
+            }
+
+        .hero-scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(100deg, rgba(6,7,10,.94) 0%, rgba(6,7,10,.82) 30%, rgba(6,7,10,.48) 58%, rgba(6,7,10,.22) 100%), linear-gradient(0deg, rgba(6,7,10,.55) 0%, rgba(6,7,10,0) 45%);
+        }
+
+        .hero-seal {
+            position: absolute;
+            top: 28px;
+            right: 28px;
+            z-index: 1;
+            width: 76px;
+            height: 76px;
+            opacity: .92;
+        }
+
+            .hero-seal img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain
+            }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            padding: 150px 28px 84px
+        }
+
+            .hero-inner .eyebrow-plain {
+                letter-spacing: .14em;
                 text-transform: uppercase;
-                font-size: 12px
+                font-size: 12.5px;
+                color: var(--gold-bright)
             }
 
-            .hero-copy h1 {
-                font-size: clamp(34px,5.4vw,58px);
+            .hero-inner h1 {
+                font-size: clamp(34px,5vw,54px);
+                line-height: 1.12;
                 color: #fff;
-                margin: 14px 0 18px
+                margin: 16px 0 20px
             }
 
-                .hero-copy h1 em {
+                .hero-inner h1 em {
                     font-style: normal;
                     color: var(--gold-bright)
                 }
 
-            .hero-copy p {
-                font-size: 17px;
-                max-width: 600px;
-                margin: 0 auto 30px;
-                color: #c3cdda
+            .hero-inner p {
+                font-size: 16.5px;
+                max-width: 540px;
+                margin: 0 0 30px;
+                color: #d3d9e2
             }
 
         .hero-ctas {
             display: flex;
             gap: 14px;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 14px
+            margin-bottom: 18px
         }
 
         .hero-contact-line {
             font-size: 13.5px;
-            color: #93a2b5;
-            margin-bottom: 44px
+            color: #a9b3c2;
+            margin-bottom: 0
         }
 
             .hero-contact-line a {
@@ -385,30 +438,34 @@
                 font-weight: 600
             }
 
-        .hero-video-frame {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            background: #000
+        .hero-credit {
+            position: absolute;
+            left: 28px;
+            bottom: 20px;
+            z-index: 1;
+            font-size: 11.5px;
+            letter-spacing: .04em;
+            color: #c3cdda;
+            background: rgba(6,7,10,.5);
+            padding: 6px 12px;
+            border: 1px solid rgba(255,255,255,.14);
         }
 
-            .hero-video-frame video {
-                width: 100%;
-                height: auto;
-                display: block
+        @media(max-width:700px) {
+            .hero {
+                min-height: 560px
             }
 
-        .hero-video-caption {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 12px 28px 40px;
-            font-size: 12.5px;
-            color: #7c8ba0;
-            letter-spacing: .03em;
+            .hero-inner {
+                padding: 130px 20px 70px
+            }
+
+            .hero-seal {
+                width: 56px;
+                height: 56px;
+                top: 18px;
+                right: 18px
+            }
         }
 
         /* ===== Section shell ===== */
@@ -637,7 +694,7 @@
                 border: 1px solid var(--line-dark);
                 background: transparent;
                 font-size: 13px;
-                color: var(--gold-bright);
+                color: var(--ink);
                 border-radius: 2px;
             }
 
@@ -676,7 +733,7 @@
                 padding: 11px 14px;
                 border-bottom: 1px solid var(--line);
                 white-space: nowrap;
-                color: var(--gold-bright)
+                color: var(--ink)
             }
 
             table.ptable tbody tr:nth-child(even) {
@@ -1020,7 +1077,7 @@
                 background: #fff;
                 font-family: inherit;
                 font-size: 14.5px;
-                color: var(--gold-bright);
+                color: var(--ink);
             }
 
         .form-row2 {
@@ -1238,260 +1295,6 @@
             padding: 10px 14px;
             margin-top: 8px;
         }
-
-        /* Premium decision-support sections */
-        .proof-grid {
-            display: grid;
-            grid-template-columns: repeat(5,1fr);
-            gap: 28px;
-            background: transparent;
-            border: 0;
-            margin-top: 42px
-        }
-
-        .proof-card {
-            background: transparent;
-            padding: 22px 12px;
-            min-height: 190px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            text-align: center
-        }
-
-        .proof-icon {
-            width: 42px;
-            height: 42px;
-            color: var(--navy-800);
-            margin-bottom: 24px
-        }
-
-        .proof-card strong {
-            font-family: var(--font-display);
-            font-size: 36px;
-            color: var(--navy-800);
-            line-height: 1;
-            font-variant-numeric: tabular-nums
-        }
-
-        .proof-card span {
-            font-size: 13px;
-            letter-spacing: 0;
-            text-transform: none;
-            color: var(--navy-600);
-            margin-top: 14px
-        }
-
-        .proof-card .counter-unit {
-            display: inline
-        }
-
-        .proof-card .counter-suffix {
-            display: inline
-        }
-
-        @media(max-width:1000px) {
-            .proof-grid {
-                grid-template-columns: repeat(3,1fr)
-            }
-        }
-
-        .intel-tabs {
-            display: flex;
-            gap: 28px;
-            border-bottom: 1px solid var(--line);
-            overflow-x: auto;
-            margin-top: 38px
-        }
-
-        .intel-tab {
-            border: 0;
-            background: none;
-            padding: 14px 0;
-            font: 600 13px var(--font-body);
-            color: var(--ink-soft);
-            white-space: nowrap;
-            cursor: pointer;
-            position: relative
-        }
-
-            .intel-tab.active {
-                color: var(--navy-800)
-            }
-
-                .intel-tab.active:after {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: -1px;
-                    height: 2px;
-                    background: var(--gold)
-                }
-
-        .intel-panel {
-            display: none;
-            padding: 30px 0 8px
-        }
-
-            .intel-panel.active {
-                display: grid;
-                grid-template-columns: .9fr 1.5fr;
-                gap: 64px;
-                animation: softRise .42s ease both
-            }
-
-            .intel-panel h3 {
-                font-family: var(--font-display);
-                font-size: 25px;
-                color: var(--navy-800);
-                margin: 0 0 12px
-            }
-
-        .intel-meta {
-            display: grid;
-            gap: 12px;
-            margin-top: 22px
-        }
-
-            .intel-meta div {
-                display: grid;
-                grid-template-columns: 100px 1fr;
-                font-size: 13px
-            }
-
-            .intel-meta span {
-                color: var(--ink-soft)
-            }
-
-        .intel-points {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px 34px
-        }
-
-        .intel-point {
-            position: relative;
-            padding-left: 18px;
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--ink-soft)
-        }
-
-            .intel-point:before {
-                content: '';
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background: var(--gold);
-                position: absolute;
-                left: 0;
-                top: 8px
-            }
-
-        .faq-pro {
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
-            gap: 80px;
-            align-items: start
-        }
-
-        .faq-list {
-            border-top: 1px solid var(--line)
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--line)
-        }
-
-        .faq-q {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            border: 0;
-            background: none;
-            padding: 20px 0;
-            text-align: left;
-            font: 600 14px var(--font-body);
-            color: var(--navy-800);
-            cursor: pointer
-        }
-
-        .faq-plus {
-            font-size: 22px;
-            color: var(--gold);
-            font-weight: 400;
-            transition: transform .25s
-        }
-
-        .faq-a {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: grid-template-rows .3s ease
-        }
-
-            .faq-a > div {
-                overflow: hidden
-            }
-
-            .faq-a p {
-                padding: 0 34px 20px 0;
-                font-size: 13px;
-                line-height: 1.75;
-                color: var(--ink-soft)
-            }
-
-        .faq-item.open .faq-a {
-            grid-template-rows: 1fr
-        }
-
-        .faq-item.open .faq-plus {
-            transform: rotate(45deg)
-        }
-
-        @keyframes softRise {
-            from {
-                opacity: 0;
-                transform: translateY(12px)
-            }
-
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @media(max-width:900px) {
-            .proof-grid {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .intel-panel.active, .faq-pro {
-                grid-template-columns: 1fr;
-                gap: 28px
-            }
-
-            .intel-points {
-                grid-template-columns: 1fr
-            }
-        }
-
-        @media(max-width:560px) {
-            .proof-grid {
-                grid-template-columns: 1fr
-            }
-
-            .proof-card {
-                min-height: 150px
-            }
-
-            .intel-tabs {
-                gap: 20px
-            }
-        }
     </style>
 </head>
 <body>
@@ -1500,11 +1303,7 @@
     <header class="site">
         <div class="wrap header-inner">
             <a href="#top" class="brand">
-                <div class="brand-mark">Z</div>
-                <div class="brand-word">
-                    <b>ZAMEEN DOST</b>
-                    <span>G R O U P</span>
-                </div>
+                <img src="files/CoverPhoto.png" alt="Zameen Dost Group">
             </a>
             <nav class="primary">
                 <a href="#projects">Projects</a>
@@ -1519,8 +1318,7 @@
                     <span>Talk to an advisor</span>
                     <a href="tel:+923399992222">+92 339 9992222</a>
                 </div>
-                <a class="btn btn-wa btn-sm" target="_blank" rel="noopener"
-                   href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20your%20projects.">WhatsApp</a>
+                <a class="btn btn-gold btn-sm" href="tel:+923399992222">Call Now</a>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
             </div>
         </div>
@@ -1538,27 +1336,33 @@
         </div>
     </header>
 
+    <a class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+       href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20your%20projects.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.85 14.25c-.25.7-1.24 1.28-2.02 1.45-.55.12-1.26.21-3.68-.79-2.83-1.17-4.7-3.98-4.85-4.17-.14-.19-1.16-1.54-1.16-2.94s.72-2.09.98-2.38c.25-.28.55-.35.73-.35h.53c.17 0 .4-.02.62.48.25.6.85 2.08.92 2.23.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.28.75 1.24 1.62 2.01 1.11 1 2.05 1.3 2.34 1.45.29.15.46.12.63-.07.17-.19.72-.84.92-1.13.19-.28.39-.24.65-.14.27.1 1.7.8 1.99 .95.29.15.48.22.55.35.07.13.07.72-.18 1.42z" /></svg>
+    </a>
+
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
-        <div class="hero-copy">
-            <span class="eyebrow-plain">Islamabad &amp; Rawalpindi Property</span>
-            <h1>Buy direct.<br><em>Verified prices.</em></h1>
-            <p>Explore verified plot sizes, payment plans and master plans across Faisal Town Phase 1, Faisal Town Phase 2, Faisal Hills, Faisal Heights and Rudn Enclave.</p>
-            <div class="hero-ctas">
-                <a href="#projects" class="btn btn-gold">Explore Projects</a>
-                <a href="#payment-plans" class="btn btn-line">View Payment Plans</a>
-            </div>
-            <div class="hero-contact-line">Speak with us directly: <a href="tel:+923399992222">+92 339 9992222</a>, call or WhatsApp</div>
-        </div>
-        <div class="hero-video-frame">
+        <div class="hero-media">
             <video autoplay muted loop playsinline poster="files/FT2_poster.jpg" preload="auto">
                 <source src="files/FT2.mp4" type="video/mp4">
             </video>
+            <div class="hero-scrim"></div>
         </div>
-        <div class="hero-video-caption wrap">
-            <span>Faisal Town Phase 2: site footage</span>
-            <span>Full frame, original aspect ratio</span>
+        <div class="hero-seal"><img src="files/Logo.jpeg" alt="Zameen Dost Group seal"></div>
+        <div class="wrap">
+            <div class="hero-inner">
+                <span class="eyebrow-plain">Islamabad &amp; Rawalpindi Property</span>
+                <h1>Buy direct.<br><em>Verified prices.</em></h1>
+                <p>Explore verified plot sizes, payment plans and master plans across Faisal Town Phase 1, Faisal Town Phase 2, Faisal Hills, Faisal Heights and Rudn Enclave.</p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-gold">Explore Projects</a>
+                    <a href="#payment-plans" class="btn btn-line">View Payment Plans</a>
+                </div>
+                <div class="hero-contact-line">Speak with us directly: <a href="tel:+923399992222">+92 339 9992222</a>, call or WhatsApp</div>
+            </div>
         </div>
+        <div class="hero-credit">Faisal Town Phase 2: site footage</div>
     </section>
 
     <!-- ============ PROJECT SHOWCASE ============ -->
@@ -1764,7 +1568,7 @@
                 <div class="pd-fact"><b>Residential &amp; Commercial</b><span>PROPERTY TYPES</span></div>
             </div>
 
-            <p style="max-width:680px;margin-bottom:30px">Faisal Town Phase 2 is laid out across Sector X &amp; Y with a Model Block at its centre and residential Sectors T, P, N and the O, Q &amp; R group around it, plus a dedicated Overseas Enclave and a launched Commercial district along the main boulevards. Below are the sector and block plans exactly as issued, followed by the underlying payment figures in the Payment Plans section.</p>
+            <p style="max-width:680px;margin-bottom:30px">Faisal Town Phase 2 is laid out across Sector X &amp; Y with a Model Block at its centre and residential Sectors T, P, N and the O, Q &amp; R group around it, plus a dedicated Overseas Enclave and a launched Commercial district along the main boulevards. Full sector and block figures for each are laid out in the Payment Plans section below.</p>
 
             <div class="video-landscape">
                 <video autoplay muted loop playsinline preload="none" poster="files/FT2_poster.jpg">
@@ -1772,35 +1576,8 @@
                 </video>
             </div>
 
-            <h4 style="margin:40px 0 16px;font-size:19px">Sector &amp; block plans on file</h4>
-            <div class="plan-gallery">
-                <div class="plan-thumb" data-img="files/FT2_Tsector_plans.jpeg" data-cap="Faisal Town Phase 2: Sector T">
-                    <img src="files/FT2_Tsector_plans.jpeg" alt="FT2 Sector T plan" loading="lazy">
-                    <div class="plan-thumb-label">Sector T</div>
-                </div>
-                <div class="plan-thumb" data-img="files/FT2_P-sector_plans.jpeg" data-cap="Faisal Town Phase 2: Sector P">
-                    <img src="files/FT2_P-sector_plans.jpeg" alt="FT2 Sector P plan" loading="lazy">
-                    <div class="plan-thumb-label">Sector P</div>
-                </div>
-                <div class="plan-thumb" data-img="files/FT2_Nblock_plans.jpeg" data-cap="Faisal Town Phase 2: Block N">
-                    <img src="files/FT2_Nblock_plans.jpeg" alt="FT2 Block N plan" loading="lazy">
-                    <div class="plan-thumb-label">Block N</div>
-                </div>
-                <div class="plan-thumb" data-img="files/FT2_Model_plans.jpeg" data-cap="Faisal Town Phase 2: Model Block Commercial">
-                    <img src="files/FT2_Model_plans.jpeg" alt="FT2 Model Block commercial plan" loading="lazy">
-                    <div class="plan-thumb-label">Model Block Commercial</div>
-                </div>
-                <div class="plan-thumb" data-img="files/FT2_on-cash.jpeg" data-cap="Faisal Town Phase 2: Model Block, Sector O, Q &amp; R">
-                    <img src="files/FT2_on-cash.jpeg" alt="FT2 Sector O Q R plan" loading="lazy">
-                    <div class="plan-thumb-label">Sector O, Q &amp; R</div>
-                </div>
-                <div class="plan-thumb" data-img="files/FT2_oversear_3-yrs-installments_plans.jpeg" data-cap="Faisal Town Phase 2: Overseas Enclave">
-                    <img src="files/FT2_oversear_3-yrs-installments_plans.jpeg" alt="FT2 Overseas Enclave plan" loading="lazy">
-                    <div class="plan-thumb-label">Overseas Enclave</div>
-                </div>
-            </div>
-
-            <div class="map-card-actions" style="margin-top:10px">
+            <div class="map-card-actions" style="margin-top:24px">
+                <a href="#payment-plans" class="btn btn-line btn-sm">See Payment Plan Figures</a>
                 <a href="files/SECTOR-X_Y__FT-2__Plans.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Sector X &amp; Y Layout (PDF)</a>
             </div>
         </div>
@@ -1825,20 +1602,10 @@
                 <div class="pd-fact"><b>NOC Approved</b><span>PLOTS</span></div>
             </div>
 
-            <p style="max-width:680px;margin-bottom:30px">Faisal Hills sits on the Main GT Road N-5, directly adjacent to the Margalla Hills. The master plan covers the Executive Block, Blocks A, B (with a B-Extension), C and D, the Hill View Estate and the Prime Block, with detailed street-by-street plotting. A dedicated villa product is also available within the project; see the payment plan below.</p>
-
-            <div class="plan-gallery">
-                <div class="plan-thumb" data-img="files/F_hills_plans.jpeg" data-cap="Faisal Hills: Payment Plan (NOC Approved)">
-                    <img src="files/F_hills_plans.jpeg" alt="Faisal Hills payment plan" loading="lazy">
-                    <div class="plan-thumb-label">Payment Plan</div>
-                </div>
-                <div class="plan-thumb" data-img="files/F_hills_villas_plan.jpeg" data-cap="Faisal Hills Villas: Payment Plan">
-                    <img src="files/F_hills_villas_plan.jpeg" alt="Faisal Hills villas payment plan" loading="lazy">
-                    <div class="plan-thumb-label">Villas Payment Plan</div>
-                </div>
-            </div>
+            <p style="max-width:680px;margin-bottom:30px">Faisal Hills sits on the Main GT Road N-5, directly adjacent to the Margalla Hills. The master plan covers the Executive Block, Blocks A, B (with a B-Extension), C and D, the Hill View Estate and the Prime Block, with detailed street-by-street plotting. A dedicated villa product is also available within the project; full figures for both are laid out in the Payment Plans section below.</p>
 
             <div class="map-card-actions" style="margin-top:10px">
+                <a href="#payment-plans" class="btn btn-line btn-sm">See Payment Plan Figures</a>
                 <a href="files/FAISAL_HILLS_MASTER_PLAN.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Master Plan (PDF, dated 01-08-2025)</a>
             </div>
         </div>
@@ -1866,14 +1633,8 @@
             <p style="max-width:680px;margin-bottom:8px">The Executive Block map covers Sectors A through D, the Executive East and West Sectors, a sports arena, entertainment zone along Jawa Dam and two grand mosques, connected to the Main Kutba Road. Residential plots range from 30x60 to 75x120, alongside dedicated commercial, park, school and future extension zones.</p>
             <div class="reveal-note" style="max-width:680px;margin-bottom:26px">We currently have the Executive Block map for Rudn Enclave on file. A dedicated payment plan document was not supplied for this project, so no pricing is shown here. Ask us directly for the latest confirmed figures.</div>
 
-            <div class="plan-gallery">
-                <div class="plan-thumb" data-img="files/Ruden_plans.jpeg" data-cap="Rudn Enclave: Executive Block Map">
-                    <img src="files/Ruden_plans.jpeg" alt="Rudn Enclave Executive Block map" loading="lazy">
-                    <div class="plan-thumb-label">Executive Block Map</div>
-                </div>
-            </div>
-
             <div class="map-card-actions" style="margin-top:10px">
+                <a href="#master-plans" class="btn btn-line btn-sm">See Master Plan Image</a>
                 <a href="files/Executive_Block_Complete_Map_Updated_28-August-2026_.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Executive Block Map (PDF, updated 28 Aug 2026)</a>
             </div>
         </div>
@@ -2223,44 +1984,6 @@
     </section>
 
     <!-- ============ LOCATIONS ============ -->
-
-    <section class="section" id="trust-proof">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow-plain">Zameen Dost Group</span>
-                <h2>Why Islamabad trusts Zameen Dost Group</h2>
-            </div>
-            <div class="proof-grid" id="trustCounters">
-                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20 20 4M7 4h13v13" /></svg><strong><span class="counter" data-target="18">0</span><span class="counter-suffix">K</span></strong><span>Million Sqm Total Area</span></div>
-                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 8h10v12H7zM10 4h4v4h-4z" /></svg><strong><span class="counter" data-target="6">0</span></strong><span>Total Projects</span></div>
-                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 11 12 4l8 7v9H4zM8 20v-6h8v6" /></svg><strong><span class="counter" data-target="565">0</span><span class="counter-suffix">+</span></strong><span>Total Residential Units</span></div>
-                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v15H4zM8 20v-5h8v5M8 9h2m4 0h2" /></svg><strong><span class="counter" data-target="156">0</span><span class="counter-suffix">+</span></strong><span>Total Commercial Units</span></div>
-                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3" /><circle cx="16" cy="9" r="2.5" /><path d="M3 20c0-4 2.5-6 6-6s6 2 6 6M14 15c3.5 0 6 1.5 6 5" /></svg><strong><span class="counter" data-target="42">0</span><span class="counter-suffix">K</span></strong><span>Total Population Capacity</span></div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section paper-dim" id="plan-intelligence">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow-plain">Master Plan Intelligence</span>
-                <h2>What the original plans actually show</h2>
-                <p>A concise reading of the project layouts already on file. Use the tabs to compare the structure of each development, then open the original plan for the full drawing.</p>
-            </div>
-            <div class="intel-tabs" role="tablist">
-                <button class="intel-tab active" data-intel="intel-ft1">Faisal Town Phase 1</button>
-                <button class="intel-tab" data-intel="intel-ft2">Faisal Town Phase 2</button>
-                <button class="intel-tab" data-intel="intel-hills">Faisal Hills</button>
-                <button class="intel-tab" data-intel="intel-rudn">Rudn Enclave</button>
-            </div>
-            <div class="intel-panel active" id="intel-ft1"><div><h3>Faisal Town Phase 1</h3><p>Established master plan with residential blocks and dedicated civic uses.</p><div class="intel-meta"><div><span>Blocks</span><b>A, B, C</b></div><div><span>Access</span><b>Fateh Jang Road, N-80</b></div><div><span>Developer</span><b>Zedem International</b></div></div></div><div class="intel-points"><div class="intel-point">Residential Blocks A, B and C</div><div class="intel-point">Commercial and civic centres</div><div class="intel-point">Educational institutions and mosques</div><div class="intel-point">Parks and hospital site shown on the plan</div></div></div>
-            <div class="intel-panel" id="intel-ft2"><div><h3>Faisal Town Phase 2</h3><p>Sector X and Y layout with multiple residential, commercial and institutional land uses.</p><div class="intel-meta"><div><span>Layout</span><b>Sectors X &amp; Y</b></div><div><span>Access</span><b>GT Road N-5 / Motorway M-2 direction</b></div><div><span>Plots</span><b>Multiple residential sizes</b></div></div></div><div class="intel-points"><div class="intel-point">Hotel and apartment sites identified</div><div class="intel-point">Hospital and educational institution sites</div><div class="intel-point">Sports complex, football and cricket grounds</div><div class="intel-point">Mosques, parks and multi-purpose play areas</div></div></div>
-            <div class="intel-panel" id="intel-hills"><div><h3>Faisal Hills</h3><p>The master plan separates the development into named blocks and estate areas along GT Road N-5.</p><div class="intel-meta"><div><span>Blocks</span><b>Executive, A, B, B Ext, C, D</b></div><div><span>Areas</span><b>Prime Block, Hill View Estate</b></div><div><span>Context</span><b>Margalla Hills / GT Road N-5</b></div></div></div><div class="intel-points"><div class="intel-point">Residential plot sizes from 25x50 upward are shown</div><div class="intel-point">Executive Block is identified on the key plan</div><div class="intel-point">Prime Block and Hill View Estate are separately labelled</div><div class="intel-point">Road, street and amenity allocations remain visible in the original drawing</div></div></div>
-            <div class="intel-panel" id="intel-rudn"><div><h3>Rudn Enclave Executive Block</h3><p>The supplied Executive Block plan is presented separately from pricing because no dedicated Rudn payment-plan document was supplied.</p><div class="intel-meta"><div><span>Sectors</span><b>A through D</b></div><div><span>Zones</span><b>Executive East &amp; West</b></div><div><span>Access</span><b>Main Kutba Road</b></div></div></div><div class="intel-points"><div class="intel-point">Residential plots from 30x60 to 75x120 are shown</div><div class="intel-point">Sports arena and entertainment zone are identified</div><div class="intel-point">Jawa Dam forms part of the plan context</div><div class="intel-point">Commercial, park, school and future-extension areas are marked</div></div></div>
-        </div>
-    </section>
-
     <section class="section paper-dim" id="locations">
         <div class="wrap">
             <div class="section-head">
@@ -2401,28 +2124,13 @@
         </div>
     </section>
 
-
-    <section class="section" id="faq">
-        <div class="wrap faq-pro">
-            <div><span class="eyebrow-plain">Common Questions</span><h2>What buyers ask us most</h2><p>Clear answers before you commit. For availability or a figure that may have changed, contact us and we will confirm the current position.</p></div>
-            <div class="faq-list">
-                <div class="faq-item"><button class="faq-q">Where do the prices on this website come from?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>The figures shown in the payment-plan sections are transcribed from the developer payment-plan material supplied for this website. Because property pricing can change, confirm the current figure before booking.</p></div></div></div>
-                <div class="faq-item"><button class="faq-q">Is it cheaper to pay in full or use installments?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Several supplied plans show lump-sum discounts, while installment structures spread payment over time. The exact difference depends on the project, block and plan. Use the tables above to compare the documented figures for the option you are considering.</p></div></div></div>
-                <div class="faq-item"><button class="faq-q">Why can the same plot size have different prices?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Pricing can vary by sector, block, plot category and location. Some supplied plans also list separate rates or additional charges for corner, boulevard-facing or other premium plot positions.</p></div></div></div>
-                <div class="faq-item"><button class="faq-q">Can I see the original master plan before deciding?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Yes. The Master Plans section keeps access to the original plan documents on file, alongside the website's easier-to-read summaries and plan previews.</p></div></div></div>
-                <div class="faq-item"><button class="faq-q">How do I confirm current availability?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Call or WhatsApp Zameen Dost Group at +92 339 9992222 with the project, sector or block and preferred size. We can then confirm the latest available information before you proceed.</p></div></div></div>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ FOOTER ============ -->
     <footer>
         <div class="wrap">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="brand" style="color:#fff">
-                        <div class="brand-mark">Z</div>
-                        <div class="brand-word"><b>ZAMEEN DOST</b><span>G R O U P</span></div>
+                    <div class="brand">
+                        <img src="files/CoverPhoto.png" alt="Zameen Dost Group" style="height:38px;width:auto">
                     </div>
                     <p>Verified project information, payment plans and master plans for leading developments across Islamabad and Rawalpindi. Buy direct, with real figures.</p>
                 </div>
@@ -2609,51 +2317,6 @@
 
             targets.forEach(el => revealIO.observe(el));
         })();
-
-        // Animated trust counters: count once when the section enters the viewport
-        (function () {
-            const wrap = document.getElementById('trustCounters');
-            if (!wrap) return;
-            const counters = wrap.querySelectorAll('.counter');
-            let played = false;
-            const run = () => {
-                if (played) return;
-                played = true;
-                counters.forEach(el => {
-                    const target = Number(el.dataset.target || 0);
-                    const duration = 1600;
-                    const start = performance.now();
-                    const tick = now => {
-                        const t = Math.min((now - start) / duration, 1);
-                        const eased = 1 - Math.pow(1 - t, 3);
-                        el.textContent = Math.floor(target * eased).toLocaleString();
-                        if (t < 1) requestAnimationFrame(tick);
-                        else el.textContent = target.toLocaleString();
-                    };
-                    requestAnimationFrame(tick);
-                });
-            };
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { run(); return; }
-            const counterIO = new IntersectionObserver(entries => {
-                if (entries.some(e => e.isIntersecting)) { run(); counterIO.disconnect(); }
-            }, { threshold: .3 });
-            counterIO.observe(wrap);
-        })();
-
-        // Master plan intelligence tabs
-        document.querySelectorAll('.intel-tab').forEach(btn => btn.addEventListener('click', () => {
-            document.querySelectorAll('.intel-tab').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.intel-panel').forEach(p => p.classList.remove('active'));
-            btn.classList.add('active');
-            document.getElementById(btn.dataset.intel).classList.add('active');
-        }));
-        // FAQ accordion
-        document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => {
-            const item = btn.closest('.faq-item');
-            const wasOpen = item.classList.contains('open');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-            if (!wasOpen) item.classList.add('open');
-        }));
     </script>
 
 </body>
