@@ -50,7 +50,7 @@
         body {
             font-family: var(--font-body);
             background: var(--paper);
-            color: var(--ink);
+            color: var(--gold-bright);
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
@@ -689,7 +689,7 @@
 
         .table-note {
             font-size: 12px;
-            color: #c9d2de;
+            color: var(--ink-soft);
             margin: 10px 0 26px;
             line-height: 1.6
         }
@@ -1020,7 +1020,7 @@
                 background: #fff;
                 font-family: inherit;
                 font-size: 14.5px;
-                color: var(--ink);
+                color: var(--gold-bright);
             }
 
         .form-row2 {
@@ -1237,6 +1237,260 @@
             font-size: 12.5px;
             padding: 10px 14px;
             margin-top: 8px;
+        }
+
+        /* Premium decision-support sections */
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 28px;
+            background: transparent;
+            border: 0;
+            margin-top: 42px
+        }
+
+        .proof-card {
+            background: transparent;
+            padding: 22px 12px;
+            min-height: 190px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center
+        }
+
+        .proof-icon {
+            width: 42px;
+            height: 42px;
+            color: var(--navy-800);
+            margin-bottom: 24px
+        }
+
+        .proof-card strong {
+            font-family: var(--font-display);
+            font-size: 36px;
+            color: var(--navy-800);
+            line-height: 1;
+            font-variant-numeric: tabular-nums
+        }
+
+        .proof-card span {
+            font-size: 13px;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--navy-600);
+            margin-top: 14px
+        }
+
+        .proof-card .counter-unit {
+            display: inline
+        }
+
+        .proof-card .counter-suffix {
+            display: inline
+        }
+
+        @media(max-width:1000px) {
+            .proof-grid {
+                grid-template-columns: repeat(3,1fr)
+            }
+        }
+
+        .intel-tabs {
+            display: flex;
+            gap: 28px;
+            border-bottom: 1px solid var(--line);
+            overflow-x: auto;
+            margin-top: 38px
+        }
+
+        .intel-tab {
+            border: 0;
+            background: none;
+            padding: 14px 0;
+            font: 600 13px var(--font-body);
+            color: var(--ink-soft);
+            white-space: nowrap;
+            cursor: pointer;
+            position: relative
+        }
+
+            .intel-tab.active {
+                color: var(--navy-800)
+            }
+
+                .intel-tab.active:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -1px;
+                    height: 2px;
+                    background: var(--gold)
+                }
+
+        .intel-panel {
+            display: none;
+            padding: 30px 0 8px
+        }
+
+            .intel-panel.active {
+                display: grid;
+                grid-template-columns: .9fr 1.5fr;
+                gap: 64px;
+                animation: softRise .42s ease both
+            }
+
+            .intel-panel h3 {
+                font-family: var(--font-display);
+                font-size: 25px;
+                color: var(--navy-800);
+                margin: 0 0 12px
+            }
+
+        .intel-meta {
+            display: grid;
+            gap: 12px;
+            margin-top: 22px
+        }
+
+            .intel-meta div {
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                font-size: 13px
+            }
+
+            .intel-meta span {
+                color: var(--ink-soft)
+            }
+
+        .intel-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 34px
+        }
+
+        .intel-point {
+            position: relative;
+            padding-left: 18px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--ink-soft)
+        }
+
+            .intel-point:before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--gold);
+                position: absolute;
+                left: 0;
+                top: 8px
+            }
+
+        .faq-pro {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 80px;
+            align-items: start
+        }
+
+        .faq-list {
+            border-top: 1px solid var(--line)
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--line)
+        }
+
+        .faq-q {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border: 0;
+            background: none;
+            padding: 20px 0;
+            text-align: left;
+            font: 600 14px var(--font-body);
+            color: var(--navy-800);
+            cursor: pointer
+        }
+
+        .faq-plus {
+            font-size: 22px;
+            color: var(--gold);
+            font-weight: 400;
+            transition: transform .25s
+        }
+
+        .faq-a {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .3s ease
+        }
+
+            .faq-a > div {
+                overflow: hidden
+            }
+
+            .faq-a p {
+                padding: 0 34px 20px 0;
+                font-size: 13px;
+                line-height: 1.75;
+                color: var(--ink-soft)
+            }
+
+        .faq-item.open .faq-a {
+            grid-template-rows: 1fr
+        }
+
+        .faq-item.open .faq-plus {
+            transform: rotate(45deg)
+        }
+
+        @keyframes softRise {
+            from {
+                opacity: 0;
+                transform: translateY(12px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        @media(max-width:900px) {
+            .proof-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .intel-panel.active, .faq-pro {
+                grid-template-columns: 1fr;
+                gap: 28px
+            }
+
+            .intel-points {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:560px) {
+            .proof-grid {
+                grid-template-columns: 1fr
+            }
+
+            .proof-card {
+                min-height: 150px
+            }
+
+            .intel-tabs {
+                gap: 20px
+            }
         }
     </style>
 </head>
@@ -1969,6 +2223,44 @@
     </section>
 
     <!-- ============ LOCATIONS ============ -->
+
+    <section class="section" id="trust-proof">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow-plain">Zameen Dost Group</span>
+                <h2>Why Islamabad trusts Zameen Dost Group</h2>
+            </div>
+            <div class="proof-grid" id="trustCounters">
+                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20 20 4M7 4h13v13" /></svg><strong><span class="counter" data-target="18">0</span><span class="counter-suffix">K</span></strong><span>Million Sqm Total Area</span></div>
+                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 8h10v12H7zM10 4h4v4h-4z" /></svg><strong><span class="counter" data-target="6">0</span></strong><span>Total Projects</span></div>
+                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 11 12 4l8 7v9H4zM8 20v-6h8v6" /></svg><strong><span class="counter" data-target="565">0</span><span class="counter-suffix">+</span></strong><span>Total Residential Units</span></div>
+                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v15H4zM8 20v-5h8v5M8 9h2m4 0h2" /></svg><strong><span class="counter" data-target="156">0</span><span class="counter-suffix">+</span></strong><span>Total Commercial Units</span></div>
+                <div class="proof-card reveal"><svg class="proof-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3" /><circle cx="16" cy="9" r="2.5" /><path d="M3 20c0-4 2.5-6 6-6s6 2 6 6M14 15c3.5 0 6 1.5 6 5" /></svg><strong><span class="counter" data-target="42">0</span><span class="counter-suffix">K</span></strong><span>Total Population Capacity</span></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section paper-dim" id="plan-intelligence">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow-plain">Master Plan Intelligence</span>
+                <h2>What the original plans actually show</h2>
+                <p>A concise reading of the project layouts already on file. Use the tabs to compare the structure of each development, then open the original plan for the full drawing.</p>
+            </div>
+            <div class="intel-tabs" role="tablist">
+                <button class="intel-tab active" data-intel="intel-ft1">Faisal Town Phase 1</button>
+                <button class="intel-tab" data-intel="intel-ft2">Faisal Town Phase 2</button>
+                <button class="intel-tab" data-intel="intel-hills">Faisal Hills</button>
+                <button class="intel-tab" data-intel="intel-rudn">Rudn Enclave</button>
+            </div>
+            <div class="intel-panel active" id="intel-ft1"><div><h3>Faisal Town Phase 1</h3><p>Established master plan with residential blocks and dedicated civic uses.</p><div class="intel-meta"><div><span>Blocks</span><b>A, B, C</b></div><div><span>Access</span><b>Fateh Jang Road, N-80</b></div><div><span>Developer</span><b>Zedem International</b></div></div></div><div class="intel-points"><div class="intel-point">Residential Blocks A, B and C</div><div class="intel-point">Commercial and civic centres</div><div class="intel-point">Educational institutions and mosques</div><div class="intel-point">Parks and hospital site shown on the plan</div></div></div>
+            <div class="intel-panel" id="intel-ft2"><div><h3>Faisal Town Phase 2</h3><p>Sector X and Y layout with multiple residential, commercial and institutional land uses.</p><div class="intel-meta"><div><span>Layout</span><b>Sectors X &amp; Y</b></div><div><span>Access</span><b>GT Road N-5 / Motorway M-2 direction</b></div><div><span>Plots</span><b>Multiple residential sizes</b></div></div></div><div class="intel-points"><div class="intel-point">Hotel and apartment sites identified</div><div class="intel-point">Hospital and educational institution sites</div><div class="intel-point">Sports complex, football and cricket grounds</div><div class="intel-point">Mosques, parks and multi-purpose play areas</div></div></div>
+            <div class="intel-panel" id="intel-hills"><div><h3>Faisal Hills</h3><p>The master plan separates the development into named blocks and estate areas along GT Road N-5.</p><div class="intel-meta"><div><span>Blocks</span><b>Executive, A, B, B Ext, C, D</b></div><div><span>Areas</span><b>Prime Block, Hill View Estate</b></div><div><span>Context</span><b>Margalla Hills / GT Road N-5</b></div></div></div><div class="intel-points"><div class="intel-point">Residential plot sizes from 25x50 upward are shown</div><div class="intel-point">Executive Block is identified on the key plan</div><div class="intel-point">Prime Block and Hill View Estate are separately labelled</div><div class="intel-point">Road, street and amenity allocations remain visible in the original drawing</div></div></div>
+            <div class="intel-panel" id="intel-rudn"><div><h3>Rudn Enclave Executive Block</h3><p>The supplied Executive Block plan is presented separately from pricing because no dedicated Rudn payment-plan document was supplied.</p><div class="intel-meta"><div><span>Sectors</span><b>A through D</b></div><div><span>Zones</span><b>Executive East &amp; West</b></div><div><span>Access</span><b>Main Kutba Road</b></div></div></div><div class="intel-points"><div class="intel-point">Residential plots from 30x60 to 75x120 are shown</div><div class="intel-point">Sports arena and entertainment zone are identified</div><div class="intel-point">Jawa Dam forms part of the plan context</div><div class="intel-point">Commercial, park, school and future-extension areas are marked</div></div></div>
+        </div>
+    </section>
+
     <section class="section paper-dim" id="locations">
         <div class="wrap">
             <div class="section-head">
@@ -2106,6 +2398,20 @@
                 </div>
                 <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">Send via WhatsApp</button>
             </form>
+        </div>
+    </section>
+
+
+    <section class="section" id="faq">
+        <div class="wrap faq-pro">
+            <div><span class="eyebrow-plain">Common Questions</span><h2>What buyers ask us most</h2><p>Clear answers before you commit. For availability or a figure that may have changed, contact us and we will confirm the current position.</p></div>
+            <div class="faq-list">
+                <div class="faq-item"><button class="faq-q">Where do the prices on this website come from?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>The figures shown in the payment-plan sections are transcribed from the developer payment-plan material supplied for this website. Because property pricing can change, confirm the current figure before booking.</p></div></div></div>
+                <div class="faq-item"><button class="faq-q">Is it cheaper to pay in full or use installments?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Several supplied plans show lump-sum discounts, while installment structures spread payment over time. The exact difference depends on the project, block and plan. Use the tables above to compare the documented figures for the option you are considering.</p></div></div></div>
+                <div class="faq-item"><button class="faq-q">Why can the same plot size have different prices?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Pricing can vary by sector, block, plot category and location. Some supplied plans also list separate rates or additional charges for corner, boulevard-facing or other premium plot positions.</p></div></div></div>
+                <div class="faq-item"><button class="faq-q">Can I see the original master plan before deciding?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Yes. The Master Plans section keeps access to the original plan documents on file, alongside the website's easier-to-read summaries and plan previews.</p></div></div></div>
+                <div class="faq-item"><button class="faq-q">How do I confirm current availability?<span class="faq-plus">+</span></button><div class="faq-a"><div><p>Call or WhatsApp Zameen Dost Group at +92 339 9992222 with the project, sector or block and preferred size. We can then confirm the latest available information before you proceed.</p></div></div></div>
+            </div>
         </div>
     </section>
 
@@ -2303,6 +2609,51 @@
 
             targets.forEach(el => revealIO.observe(el));
         })();
+
+        // Animated trust counters: count once when the section enters the viewport
+        (function () {
+            const wrap = document.getElementById('trustCounters');
+            if (!wrap) return;
+            const counters = wrap.querySelectorAll('.counter');
+            let played = false;
+            const run = () => {
+                if (played) return;
+                played = true;
+                counters.forEach(el => {
+                    const target = Number(el.dataset.target || 0);
+                    const duration = 1600;
+                    const start = performance.now();
+                    const tick = now => {
+                        const t = Math.min((now - start) / duration, 1);
+                        const eased = 1 - Math.pow(1 - t, 3);
+                        el.textContent = Math.floor(target * eased).toLocaleString();
+                        if (t < 1) requestAnimationFrame(tick);
+                        else el.textContent = target.toLocaleString();
+                    };
+                    requestAnimationFrame(tick);
+                });
+            };
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { run(); return; }
+            const counterIO = new IntersectionObserver(entries => {
+                if (entries.some(e => e.isIntersecting)) { run(); counterIO.disconnect(); }
+            }, { threshold: .3 });
+            counterIO.observe(wrap);
+        })();
+
+        // Master plan intelligence tabs
+        document.querySelectorAll('.intel-tab').forEach(btn => btn.addEventListener('click', () => {
+            document.querySelectorAll('.intel-tab').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.intel-panel').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.intel).classList.add('active');
+        }));
+        // FAQ accordion
+        document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        }));
     </script>
 
 </body>
