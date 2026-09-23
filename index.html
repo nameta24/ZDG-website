@@ -21,8 +21,8 @@
             --navy-600: #2d3440;
             --paper: #f6f3ec;
             --paper-dim: #ece7da;
-            --ink: #15202b;
-            --ink-soft: #4a5768;
+            --ink: #1c1a16;
+            --ink-soft: #544c42;
             --gold: #b68d4c;
             --gold-bright: #e2bd80;
             --line: #dcd5c4;
@@ -106,7 +106,7 @@
         }
 
         .on-dark p {
-            color: #c9d2de
+            color: #cdc7ba
         }
 
         /* ===== Buttons ===== */
@@ -306,6 +306,31 @@
             }
         }
 
+        @media(max-width:560px) {
+            .wrap {
+                padding: 0 16px
+            }
+
+            .brand img {
+                height: 30px
+            }
+
+            .header-cta {
+                gap: 10px
+            }
+        }
+
+        @media(max-width:380px) {
+            .brand img {
+                height: 26px
+            }
+
+            .btn-gold.btn-sm {
+                padding: 9px 14px;
+                font-size: 13px
+            }
+        }
+
         /* ===== Floating WhatsApp button ===== */
         .wa-float {
             position: fixed;
@@ -417,7 +442,7 @@
                 font-size: 16.5px;
                 max-width: 540px;
                 margin: 0 0 30px;
-                color: #d3d9e2
+                color: #d9d3c6
             }
 
         .hero-ctas {
@@ -429,7 +454,7 @@
 
         .hero-contact-line {
             font-size: 13.5px;
-            color: #a9b3c2;
+            color: #b0a998;
             margin-bottom: 0
         }
 
@@ -445,7 +470,7 @@
             z-index: 1;
             font-size: 11.5px;
             letter-spacing: .04em;
-            color: #c3cdda;
+            color: #c9c2b3;
             background: rgba(6,7,10,.5);
             padding: 6px 12px;
             border: 1px solid rgba(255,255,255,.14);
@@ -502,7 +527,7 @@
         }
 
             .dark-band .section-head p {
-                color: #b7c2d1
+                color: #bdb6a7
             }
 
         .paper-dim {
@@ -574,7 +599,7 @@
             position: relative;
             aspect-ratio: 16/10;
             overflow: hidden;
-            background: #0c1930
+            background: #0a0c10
         }
 
             .pcard-media img, .pcard-media video {
@@ -587,7 +612,7 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            background: rgba(10,21,38,.85);
+            background: rgba(6,7,10,.85);
             color: var(--gold-bright);
             font-size: 11px;
             letter-spacing: .12em;
@@ -608,7 +633,7 @@
 
         .pcard-loc {
             font-size: 13px;
-            color: #8fa0b6;
+            color: #a39a8a;
             margin-bottom: 14px
         }
 
@@ -621,7 +646,7 @@
 
             .pcard-facts span {
                 font-size: 11.5px;
-                color: #c9d2de;
+                color: #cdc7ba;
                 border: 1px solid var(--line-dark);
                 padding: 5px 10px;
                 letter-spacing: .02em;
@@ -691,23 +716,28 @@
 
             .subnav button {
                 padding: 9px 16px;
-                border: 1px solid var(--line-dark);
+                border: 1px solid rgba(255,255,255,.28);
                 background: transparent;
                 font-size: 13px;
-                color: var(--ink);
+                color: #ddd7c9;
                 border-radius: 2px;
             }
 
+                .subnav button:hover {
+                    border-color: rgba(255,255,255,.55);
+                    color: #fff
+                }
+
                 .subnav button.active {
-                    background: var(--navy-900);
-                    color: #fff;
-                    border-color: var(--navy-900)
+                    background: var(--gold);
+                    color: #1a1206;
+                    border-color: var(--gold)
                 }
 
         /* plan table */
         .table-scroll {
             overflow-x: auto;
-            border: 1px solid var(--line);
+            border: 1px solid rgba(255,255,255,.14);
             margin-bottom: 8px
         }
 
@@ -731,22 +761,22 @@
 
             table.ptable tbody td {
                 padding: 11px 14px;
-                border-bottom: 1px solid var(--line);
+                border-bottom: 1px solid rgba(255,255,255,.1);
                 white-space: nowrap;
-                color: var(--ink)
+                color: #f0ebe0
             }
 
             table.ptable tbody tr:nth-child(even) {
-                background: rgba(0,0,0,.02)
+                background: rgba(255,255,255,.035)
             }
 
             table.ptable tbody tr:hover {
-                background: rgba(185,138,61,.08)
+                background: rgba(226,189,128,.12)
             }
 
         .table-note {
             font-size: 12px;
-            color: var(--ink-soft);
+            color: #b0a998;
             margin: 10px 0 26px;
             line-height: 1.6
         }
@@ -859,6 +889,85 @@
                     object-fit: contain
                 }
 
+        .video-feature {
+            display: flex;
+            gap: 0;
+            align-items: stretch;
+            border: 1px solid var(--line-dark);
+            margin-bottom: 8px
+        }
+
+            .video-feature .video-landscape.is-portrait {
+                max-width: none;
+                width: 280px;
+                flex: 0 0 280px;
+                margin: 0;
+                border: none
+            }
+
+        .video-feature-aside {
+            flex: 1;
+            background: var(--navy-950);
+            color: #fff;
+            padding: 36px 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 22px;
+        }
+
+            .video-feature-aside h4 {
+                font-size: 21px;
+                color: #fff;
+                margin: 0
+            }
+
+        .video-feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px
+        }
+
+            .video-feature-list div {
+                display: flex;
+                gap: 12px;
+                align-items: baseline
+            }
+
+                .video-feature-list div b {
+                    color: var(--gold-bright);
+                    font-family: var(--font-display);
+                    font-size: 16px;
+                    flex-shrink: 0;
+                    min-width: 110px
+                }
+
+                .video-feature-list div span {
+                    color: #c9c2b3;
+                    font-size: 13.5px
+                }
+
+        .video-feature-aside .btn {
+            align-self: flex-start
+        }
+
+        @media(max-width:760px) {
+            .video-feature {
+                flex-direction: column
+            }
+
+                .video-feature .video-landscape.is-portrait {
+                    width: 100%;
+                    flex: none;
+                    max-width: 340px;
+                    margin: 0 auto
+                }
+
+            .video-feature-aside {
+                padding: 28px 24px
+            }
+        }
+
         /* CTA strip */
         .inline-cta {
             margin-top: 44px;
@@ -872,7 +981,7 @@
         }
 
             .inline-cta p {
-                color: #c9d2de;
+                color: #cdc7ba;
                 margin: 0;
                 font-size: 14.5px;
                 max-width: 440px
@@ -990,7 +1099,7 @@
 
             .about-card li {
                 font-size: 14px;
-                color: #c9d2de;
+                color: #cdc7ba;
                 padding-left: 18px;
                 position: relative
             }
@@ -1039,7 +1148,7 @@
         .locator-map {
             min-height: 420px;
             position: relative;
-            background: #dfe4e8
+            background: #e6e1d4
         }
 
             .locator-map iframe {
@@ -1065,7 +1174,7 @@
             .form-field label {
                 display: block;
                 font-size: 12.5px;
-                color: var(--ink-soft);
+                color: #c9c2b3;
                 margin-bottom: 6px;
                 letter-spacing: .02em
             }
@@ -1094,7 +1203,7 @@
         /* ===== Footer ===== */
         footer {
             background: var(--navy-950);
-            color: #c9d2de;
+            color: #cdc7ba;
             padding: 70px 0 30px
         }
 
@@ -1107,7 +1216,7 @@
 
         .footer-brand p {
             font-size: 13.5px;
-            color: #93a2b5;
+            color: #a89f8e;
             margin-top: 16px;
             max-width: 280px
         }
@@ -1128,7 +1237,7 @@
 
             footer ul a {
                 font-size: 13.5px;
-                color: #a9b4c3
+                color: #b5ada0
             }
 
                 footer ul a:hover {
@@ -1143,7 +1252,7 @@
             flex-wrap: wrap;
             gap: 14px;
             font-size: 12px;
-            color: #6b7d93
+            color: #7d7568
         }
 
         @media(max-width:900px) {
@@ -1251,7 +1360,7 @@
             left: 0;
             right: 0;
             text-align: center;
-            color: #cbd5e0;
+            color: #d6d0c2;
             font-size: 13px
         }
 
@@ -1308,7 +1417,6 @@
             <nav class="primary">
                 <a href="#projects">Projects</a>
                 <a href="#payment-plans">Payment Plans</a>
-                <a href="#master-plans">Master Plans</a>
                 <a href="#locations">Locations</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -1325,7 +1433,6 @@
         <div class="mobile-menu" id="mobileMenu">
             <a href="#projects">Projects</a>
             <a href="#payment-plans">Payment Plans</a>
-            <a href="#master-plans">Master Plans</a>
             <a href="#locations">Locations</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
@@ -1506,8 +1613,9 @@
                         <div class="pcard-facts">
                             <span>Site walkthrough available</span>
                         </div>
-                        <p style="font-size:13px;color:#8fa0b6;margin-bottom:16px">We don't yet have verified plot sizes or a payment plan on file for this project. Ask us directly and we'll confirm current figures with the developer before sharing them.</p>
+                        <p style="font-size:13px;color:#a39a8a;margin-bottom:16px">We don't yet have verified plot sizes or a payment plan on file for this project. Ask us directly and we'll confirm current figures with the developer before sharing them.</p>
                         <div class="pcard-actions">
+                            <a href="#jewel" class="btn btn-line btn-sm">View Project</a>
                             <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20and%20pricing%20for%20Faisal%20Jewel.">Ask About Faisal Jewel</a>
                         </div>
                     </div>
@@ -1634,7 +1742,6 @@
             <div class="reveal-note" style="max-width:680px;margin-bottom:26px">We currently have the Executive Block map for Rudn Enclave on file. A dedicated payment plan document was not supplied for this project, so no pricing is shown here. Ask us directly for the latest confirmed figures.</div>
 
             <div class="map-card-actions" style="margin-top:10px">
-                <a href="#master-plans" class="btn btn-line btn-sm">See Master Plan Image</a>
                 <a href="files/Executive_Block_Complete_Map_Updated_28-August-2026_.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Executive Block Map (PDF, updated 28 Aug 2026)</a>
             </div>
         </div>
@@ -1661,15 +1768,59 @@
 
             <p style="max-width:680px;margin-bottom:30px">Faisal Heights is an apartment tower on Apartment Plot No. 5 in Block-C of Faisal Town Phase 1. Units range from studios through to four-bedroom lofts, sold at a fixed per-square-foot rate with a 25% down payment and 71 monthly installments. Full apartment floor plans are available in the original developer document below.</p>
 
-            <div class="video-landscape is-portrait">
-                <video autoplay muted loop playsinline preload="none" poster="files/F_height_poster.jpg">
-                    <source src="files/F_height.mp4" type="video/mp4">
-                </video>
+            <div class="video-feature">
+                <div class="video-landscape is-portrait">
+                    <video autoplay muted loop playsinline preload="none" poster="files/F_height_poster.jpg">
+                        <source src="files/F_height.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-feature-aside">
+                    <h4>Why buyers choose Faisal Heights</h4>
+                    <div class="video-feature-list">
+                        <div><b>32 unit sizes</b><span>Studio, 1, 2 and 3 Bed, plus 3 and 4 Bed Lofts</span></div>
+                        <div><b>Fixed rate</b><span>Price locked per square foot, no hidden escalation</span></div>
+                        <div><b>25% down</b><span>Balance spread over 71 easy monthly installments</span></div>
+                        <div><b>Block-C</b><span>Inside Faisal Town Phase 1, Main Fateh Jang Road</span></div>
+                    </div>
+                    <a href="#payment-plans" class="btn btn-gold btn-sm">See Payment Plan Table</a>
+                </div>
             </div>
 
             <div class="map-card-actions" style="margin-top:16px">
                 <a href="files/Apartments_Plan_only_-_Faisal_Heights.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Apartment Floor Plans (PDF)</a>
-                <a href="#payment-plans" class="btn btn-ghost btn-sm">See Payment Plan Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAISAL JEWEL ============ -->
+    <section class="pd" id="jewel">
+        <div class="wrap">
+            <div class="pd-head">
+                <div>
+                    <span class="eyebrow-plain">Project Detail</span>
+                    <h2>Faisal Jewel</h2>
+                    <div class="loc">Full location and plot details on request</div>
+                </div>
+                <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20and%20pricing%20for%20Faisal%20Jewel.">Ask About This Project</a>
+            </div>
+
+            <div class="reveal-note" style="max-width:680px;margin-bottom:30px">We don't yet have verified plot sizes, blocks or a payment plan on file for Faisal Jewel. A site walkthrough is available on request, and we'll confirm current figures directly with the developer before sharing them, the same as every other figure on this site.</div>
+
+            <div class="video-feature">
+                <div class="video-landscape is-portrait">
+                    <video autoplay muted loop playsinline preload="none" poster="files/F_jewel_poster.jpg">
+                        <source src="files/F_jewel.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-feature-aside">
+                    <h4>What we can confirm today</h4>
+                    <div class="video-feature-list">
+                        <div><b>Site footage</b><span>Walkthrough video filmed on site, shown here in full</span></div>
+                        <div><b>Details on request</b><span>Plot sizes and blocks confirmed directly with our team</span></div>
+                        <div><b>No pricing yet</b><span>Payment plan not yet released by the developer</span></div>
+                    </div>
+                    <a href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20and%20pricing%20for%20Faisal%20Jewel." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Ask About Faisal Jewel</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1906,83 +2057,6 @@
     </section>
 
     <!-- ============ MASTER PLANS & MAPS ============ -->
-    <section class="section" id="master-plans">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow-plain">Master Plans &amp; Maps</span>
-                <h2>The real, original master plans</h2>
-                <p>These are the developer's own master-plan documents, not a redrawn copy. Click any card to preview it large, or open the original PDF.</p>
-            </div>
-
-            <div class="maps-grid">
-                <div class="map-card">
-                    <div class="map-card-media" data-img="files/FT2_poster.jpg" data-cap="Faisal Town Phase 2: Sector X &amp; Y" onclick="openLightboxImg(this)">
-                        <img src="files/FT2_poster.jpg" alt="Faisal Town Phase 2 Sector X&Y layout preview" loading="lazy">
-                    </div>
-                    <div class="map-card-body">
-                        <h4>Faisal Town Phase 2: Sector X &amp; Y Layout</h4>
-                        <p>Full sector layout with Model Block, T/P/N sectors and Overseas Enclave.</p>
-                        <div class="map-card-actions">
-                            <a href="files/SECTOR-X_Y__FT-2__Plans.pdf" target="_blank" class="btn btn-ghost btn-sm">Open PDF</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="map-card">
-                    <div class="map-card-media" data-img="files/FT1_poster.jpg" data-cap="Faisal Town Phase 1: Master Plan" onclick="openLightboxImg(this)">
-                        <img src="files/FT1_poster.jpg" alt="Faisal Town Phase 1 master plan preview" loading="lazy">
-                    </div>
-                    <div class="map-card-body">
-                        <h4>Faisal Town Phase 1: Master Plan</h4>
-                        <p>Blocks A, B, C with civic centres, schools and parks.</p>
-                        <div class="map-card-actions">
-                            <a href="files/Faisal_Town-I_Master_Plan.pdf" target="_blank" class="btn btn-ghost btn-sm">Open PDF</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="map-card">
-                    <div class="map-card-media" data-img="files/F_hills_plans.jpeg" data-cap="Faisal Hills: Master Plan" onclick="openLightboxImg(this)">
-                        <img src="files/F_hills_plans.jpeg" alt="Faisal Hills master plan preview" loading="lazy">
-                    </div>
-                    <div class="map-card-body">
-                        <h4>Faisal Hills: Master Plan (dated 01-08-2025)</h4>
-                        <p>Executive, A, B, B-Extension, C, D blocks, Hill View Estate &amp; Prime Block.</p>
-                        <div class="map-card-actions">
-                            <a href="files/FAISAL_HILLS_MASTER_PLAN.pdf" target="_blank" class="btn btn-ghost btn-sm">Open PDF</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="map-card">
-                    <div class="map-card-media" data-img="files/Ruden_plans.jpeg" data-cap="Rudn Enclave: Executive Block Map" onclick="openLightboxImg(this)">
-                        <img src="files/Ruden_plans.jpeg" alt="Rudn Enclave executive block map preview" loading="lazy">
-                    </div>
-                    <div class="map-card-body">
-                        <h4>Rudn Enclave: Executive Block Map (updated 28 Aug 2026)</h4>
-                        <p>Sectors A–D, Executive East &amp; West, Jawa Dam &amp; Entertainment Zone.</p>
-                        <div class="map-card-actions">
-                            <a href="files/Executive_Block_Complete_Map_Updated_28-August-2026_.pdf" target="_blank" class="btn btn-ghost btn-sm">Open PDF</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="map-card">
-                    <div class="map-card-media" data-img="files/F_height_poster.jpg" data-cap="Faisal Heights: Apartment Floor Plans" onclick="openLightboxImg(this)">
-                        <img src="files/F_height_poster.jpg" alt="Faisal Heights apartment floor plans preview" loading="lazy">
-                    </div>
-                    <div class="map-card-body">
-                        <h4>Faisal Heights: Apartment Floor Plans</h4>
-                        <p>Full floor-by-floor apartment layouts, Block-C, Faisal Town Phase 1.</p>
-                        <div class="map-card-actions">
-                            <a href="files/Apartments_Plan_only_-_Faisal_Heights.pdf" target="_blank" class="btn btn-ghost btn-sm">Open PDF</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ LOCATIONS ============ -->
     <section class="section paper-dim" id="locations">
         <div class="wrap">
@@ -2074,7 +2148,7 @@
                     <a class="btn btn-gold" href="tel:+923399992222">Call +92 339 9992222</a>
                     <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/923399992222">WhatsApp Us</a>
                 </div>
-                <p style="font-size:12.5px;color:#8fa0b6">Office address and email are not listed here yet. Call or WhatsApp is the fastest way to reach us.</p>
+                <p style="font-size:12.5px;color:#a39a8a">Office address and email are not listed here yet. Call or WhatsApp is the fastest way to reach us.</p>
             </div>
 
             <form id="inquiryForm" onsubmit="return handleSubmit(event)">
@@ -2148,7 +2222,6 @@
                     <h5>Resources</h5>
                     <ul>
                         <li><a href="#payment-plans">Payment Plans</a></li>
-                        <li><a href="#master-plans">Master Plans &amp; Maps</a></li>
                         <li><a href="#locations">Project Locator</a></li>
                         <li><a href="#about">About Us</a></li>
                     </ul>
