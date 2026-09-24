@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zameen Dost Group | Buy Direct. Verified Prices. Islamabad &amp; Rawalpindi</title>
-    <meta name="description" content="Zameen Dost Group gives you verified plot sizes, payment plans and master plans for Faisal Town Phase 1 &amp; 2, Faisal Hills, Faisal Heights and Rudn Enclave. Call or WhatsApp +92 339 9992222.">
+    <meta name="description" content="Zameen Dost Group gives you verified plot sizes, payment plans and master plans for Faisal Town Phase 1 &amp; 2, Faisal Hills, Rudn Enclave, Faisal Heights and Faisal Jewel. Call or WhatsApp +92 339 9992222.">
     <meta name="theme-color" content="#0a0c10">
-    <link rel="icon" type="image/jpeg" href="files/Logo.png">
+    <link rel="icon" type="image/png" href="files/Logo.png">
 
     <meta property="og:title" content="Zameen Dost Group: Buy Direct. Verified Prices.">
     <meta property="og:description" content="Verified project information, payment plans and master plans across leading developments in Islamabad and Rawalpindi.">
@@ -190,8 +190,7 @@
             position: sticky;
             top: 0;
             z-index: 200;
-            background: rgba(255,255,255,.97);
-            backdrop-filter: blur(10px);
+            background: #fff;
             border-bottom: 1px solid var(--line);
         }
 
@@ -422,7 +421,7 @@
             position: relative;
             z-index: 1;
             max-width: 700px;
-            padding: 150px 28px 84px
+            padding: 110px 0 96px
         }
 
             .hero-inner .eyebrow-plain {
@@ -480,23 +479,6 @@
             background: rgba(6,7,10,.5);
             padding: 6px 12px;
             border: 1px solid rgba(255,255,255,.14);
-        }
-
-        @media(max-width:700px) {
-            .hero {
-                min-height: 560px
-            }
-
-            .hero-inner {
-                padding: 130px 20px 70px
-            }
-
-            .hero-seal {
-                width: 56px;
-                height: 56px;
-                top: 18px;
-                right: 18px
-            }
         }
 
         /* ===== Section shell ===== */
@@ -1329,50 +1311,6 @@
             }
         }
 
-        /* ===== Lightbox ===== */
-        .lightbox {
-            position: fixed;
-            inset: 0;
-            background: rgba(8,12,20,.94);
-            z-index: 500;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 30px
-        }
-
-            .lightbox.open {
-                display: flex
-            }
-
-            .lightbox img {
-                max-width: 100%;
-                max-height: 90vh;
-                object-fit: contain;
-                box-shadow: 0 20px 60px rgba(0,0,0,.5)
-            }
-
-        .lightbox-close {
-            position: absolute;
-            top: 22px;
-            right: 26px;
-            color: #fff;
-            font-size: 30px;
-            background: none;
-            border: none;
-            line-height: 1
-        }
-
-        .lightbox-cap {
-            position: absolute;
-            bottom: 22px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: #d6d0c2;
-            font-size: 13px
-        }
-
         /* reduced motion */
         @media(prefers-reduced-motion:reduce) {
             html {
@@ -1405,13 +1343,220 @@
             }
         }
 
-        .reveal-note {
-            background: #fff3d6;
-            border: 1px solid #e2c27a;
-            color: #5c4519;
-            font-size: 12.5px;
-            padding: 10px 14px;
-            margin-top: 8px;
+
+        .hero > .wrap {
+            width: 100%
+        }
+
+        .hero-credit {
+            left: max(28px, calc((100vw - var(--container)) / 2 + 28px))
+        }
+
+        .hero-seal {
+            right: max(28px, calc((100vw - var(--container)) / 2 + 28px))
+        }
+        /* ===== Hero: stacked, uncropped video on tablet and mobile ===== */
+        @media(max-width:900px) {
+            .hero {
+                display: block;
+                min-height: 0
+            }
+
+            .hero-media {
+                position: relative;
+                inset: auto;
+                width: 100%;
+                aspect-ratio: 16/9
+            }
+
+                .hero-media video {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    min-width: 0;
+                    min-height: 0;
+                    transform: none;
+                    object-fit: cover
+                }
+
+            .hero-scrim {
+                background: linear-gradient(0deg, rgba(6,7,10,.55) 0%, rgba(6,7,10,0) 40%)
+            }
+
+            .hero-seal {
+                width: 52px;
+                height: 52px;
+                top: 12px;
+                right: 12px
+            }
+
+            .hero-inner {
+                max-width: none;
+                padding: 32px 0 20px
+            }
+
+                .hero-inner h1 {
+                    margin: 12px 0 14px
+                }
+
+                .hero-inner p {
+                    margin-bottom: 24px
+                }
+
+            .hero-credit {
+                left: auto;
+                position: static;
+                display: block;
+                background: none;
+                border: 0;
+                padding: 0 28px 32px
+            }
+        }
+
+        @media(max-width:560px) {
+            .hero-credit {
+                padding: 0 16px 28px
+            }
+
+            .hero-ctas .btn {
+                flex: 1 1 100%
+            }
+        }
+
+        /* ===== Consistency layer ===== */
+        section[id], .plan-block {
+            scroll-margin-top: 92px
+        }
+
+        .section {
+            padding: 96px 0
+        }
+
+        @media(max-width:700px) {
+            .section {
+                padding: 64px 0
+            }
+
+            .pd {
+                padding: 60px 0
+            }
+
+            .section-head {
+                margin-bottom: 36px
+            }
+        }
+
+        .pd .eyebrow-plain, #about .eyebrow-plain {
+            color: #8a6420
+        }
+
+        .pcard-media {
+            aspect-ratio: 16/9
+        }
+
+            .pcard-media img {
+                object-fit: contain;
+                background: #0a0c10
+            }
+
+            .pcard-media.is-portrait video {
+                object-fit: contain
+            }
+
+        .pcard-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column
+        }
+
+        .pcard-facts {
+            align-content: flex-start
+        }
+
+        .pcard-actions {
+            padding-top: 6px
+        }
+
+            .pcard-actions .btn {
+                flex: 1 1 auto
+            }
+
+        .pd-intro {
+            max-width: 680px;
+            margin-bottom: 30px
+        }
+
+        .pd-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px
+        }
+
+            .pd-actions:empty {
+                display: none
+            }
+
+        .video-landscape video {
+            display: block;
+            width: 100%;
+            height: auto
+        }
+
+        .video-landscape.is-portrait video {
+            max-height: 78vh
+        }
+
+        @media(max-width:700px) {
+            .pd-actions .btn {
+                flex: 1 1 100%
+            }
+
+            .subnav {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 8px;
+                scrollbar-width: thin
+            }
+
+                .subnav button {
+                    flex: 0 0 auto;
+                    white-space: nowrap
+                }
+
+            .table-scroll {
+                -webkit-overflow-scrolling: touch
+            }
+
+                .table-scroll::before {
+                    content: "Swipe sideways to see all columns";
+                    display: block;
+                    position: sticky;
+                    left: 0;
+                    width: max-content;
+                    font-size: 11.5px;
+                    color: #b0a998;
+                    padding: 8px 12px
+                }
+
+            .mobile-menu.open {
+                padding-bottom: 90px
+            }
+
+            .inline-cta {
+                padding: 24px 20px
+            }
+
+                .inline-cta .btn {
+                    width: 100%
+                }
+        }
+
+        @media(max-width:760px) {
+            .mobile-bar {
+                padding-bottom: env(safe-area-inset-bottom)
+            }
         }
     </style>
 </head>
@@ -1460,7 +1605,7 @@
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
         <div class="hero-media">
-            <video autoplay muted loop playsinline poster="files/FT2_poster.jpg" preload="auto">
+            <video autoplay muted loop playsinline preload="auto">
                 <source src="files/FT2.mp4" type="video/mp4">
             </video>
             <div class="hero-scrim"></div>
@@ -1470,7 +1615,7 @@
             <div class="hero-inner">
                 <span class="eyebrow-plain">Islamabad &amp; Rawalpindi Property</span>
                 <h1>Buy direct.<br><em>Verified prices.</em></h1>
-                <p>Explore verified plot sizes, payment plans and master plans across Faisal Town Phase 1, Faisal Town Phase 2, Faisal Hills, Faisal Heights and Rudn Enclave.</p>
+                <p>Explore verified plot sizes, payment plans and master plans across Faisal Town Phase 1, Faisal Town Phase 2, Faisal Hills, Rudn Enclave, Faisal Heights and Faisal Jewel.</p>
                 <div class="hero-ctas">
                     <a href="#projects" class="btn btn-gold">Explore Projects</a>
                     <a href="#payment-plans" class="btn btn-line">View Payment Plans</a>
@@ -1487,8 +1632,8 @@
             <div class="rail-controls">
                 <div class="section-head" style="margin-bottom:0">
                     <span class="eyebrow-plain">Core Projects</span>
-                    <h2>Five developments. One place to compare them.</h2>
-                    <p>Scroll or drag through each project. Every card links to real plans, verified pricing and the original developer documents.</p>
+                    <h2>Six developments. One place to compare them.</h2>
+                    <p>Scroll or drag through each project. Every card links to the plans and documents behind the numbers.</p>
                 </div>
                 <div class="rail-btns">
                     <button class="rail-btn" id="railPrev" aria-label="Previous">‹</button>
@@ -1500,7 +1645,7 @@
 
                 <article class="pcard">
                     <div class="pcard-media">
-                        <video autoplay muted loop playsinline preload="none" poster="files/FT1_poster.jpg">
+                        <video autoplay muted loop playsinline preload="metadata">
                             <source src="files/FT1.mp4" type="video/mp4">
                         </video>
                         <span class="pcard-tag">Faisal Town</span>
@@ -1508,22 +1653,14 @@
                     <div class="pcard-body">
                         <h3>Faisal Town Phase 1</h3>
                         <div class="pcard-loc">Main Fateh Jang Road (N-80), Rawalpindi</div>
-                        <div class="pcard-facts">
-                            <span>Blocks A · B · C</span>
-                            <span>Residential &amp; Commercial</span>
-                            <span>Developer: Zedem International</span>
-                        </div>
-                        <div class="pcard-actions">
-                            <a href="#ft1" class="btn btn-line btn-sm">View Project</a>
-                            <a href="files/Faisal_Town-I_Master_Plan.pdf" target="_blank" class="btn btn-line btn-sm">Master Plan</a>
-                            <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Town%20Phase%201.">WhatsApp</a>
-                        </div>
+                        <div class="pcard-facts"><span>Blocks A · B · C</span><span>Residential &amp; Commercial</span><span>Developer: Zedem International</span></div>
+                        <div class="pcard-actions"><a href="#ft1" class="btn btn-line btn-sm">View Project</a><a href="files/Faisal_Town-I_Master_Plan.pdf" target="_blank" class="btn btn-line btn-sm">Master Plan</a><a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Town%20Phase%201.">WhatsApp</a></div>
                     </div>
                 </article>
 
                 <article class="pcard">
                     <div class="pcard-media">
-                        <video autoplay muted loop playsinline preload="none" poster="files/FT2_poster.jpg">
+                        <video autoplay muted loop playsinline preload="metadata">
                             <source src="files/FT2.mp4" type="video/mp4">
                         </video>
                         <span class="pcard-tag">Faisal Town</span>
@@ -1531,16 +1668,8 @@
                     <div class="pcard-body">
                         <h3>Faisal Town Phase 2</h3>
                         <div class="pcard-loc">Sector X &amp; Y, near Thalian Interchange</div>
-                        <div class="pcard-facts">
-                            <span>Sectors T · P · N · O,Q&amp;R</span>
-                            <span>5.56 Marla – 2 Kanal</span>
-                            <span>Overseas &amp; on-cash plans</span>
-                        </div>
-                        <div class="pcard-actions">
-                            <a href="#ft2" class="btn btn-line btn-sm">View Project</a>
-                            <a href="#payment-plans" class="btn btn-line btn-sm">Payment Plans</a>
-                            <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Town%20Phase%202.">WhatsApp</a>
-                        </div>
+                        <div class="pcard-facts"><span>Sectors T · P · N · O,Q&amp;R</span><span>5.56 Marla – 2 Kanal</span><span>Overseas &amp; on-cash plans</span></div>
+                        <div class="pcard-actions"><a href="#ft2" class="btn btn-line btn-sm">View Project</a><a href="#payment-plans" data-plan="pp-ft2-t" class="btn btn-line btn-sm">Payment Plan</a><a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Town%20Phase%202.">WhatsApp</a></div>
                     </div>
                 </article>
 
@@ -1552,43 +1681,29 @@
                     <div class="pcard-body">
                         <h3>Faisal Hills</h3>
                         <div class="pcard-loc">Main GT Road N-5, adjacent to Margalla Hills</div>
-                        <div class="pcard-facts">
-                            <span>Blocks Executive · A · B · C · D</span>
-                            <span>Hill View Estate · Prime Block</span>
-                            <span>NOC Approved</span>
-                        </div>
-                        <div class="pcard-actions">
-                            <a href="#hills" class="btn btn-line btn-sm">View Project</a>
-                            <a href="files/FAISAL_HILLS_MASTER_PLAN.pdf" target="_blank" class="btn btn-line btn-sm">Master Plan</a>
-                            <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Hills.">WhatsApp</a>
-                        </div>
+                        <div class="pcard-facts"><span>Blocks Executive · A · B · C · D</span><span>Hill View Estate · Prime Block</span><span>NOC Approved</span></div>
+                        <div class="pcard-actions"><a href="#hills" class="btn btn-line btn-sm">View Project</a><a href="#payment-plans" data-plan="pp-hills" class="btn btn-line btn-sm">Payment Plan</a><a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Hills.">WhatsApp</a></div>
                     </div>
                 </article>
 
                 <article class="pcard">
                     <div class="pcard-media">
-                        <img src="files/Ruden_plans.jpeg" alt="Rudn Enclave Executive Block map" loading="lazy">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="files/Ruden_enclave.mp4" type="video/mp4">
+                        </video>
                         <span class="pcard-tag">Rudn Enclave</span>
                     </div>
                     <div class="pcard-body">
                         <h3>Rudn Enclave</h3>
                         <div class="pcard-loc">Executive Block · Sectors A–D · Jawa Dam</div>
-                        <div class="pcard-facts">
-                            <span>Executive East &amp; West Sector</span>
-                            <span>30x60 – 75x120 plots</span>
-                            <span>Entertainment Zone &amp; Sports Arena</span>
-                        </div>
-                        <div class="pcard-actions">
-                            <a href="#rudn" class="btn btn-line btn-sm">View Project</a>
-                            <a href="files/Executive_Block_Complete_Map_Updated_28-August-2026_.pdf" target="_blank" class="btn btn-line btn-sm">Executive Block Map</a>
-                            <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Rudn%20Enclave.">WhatsApp</a>
-                        </div>
+                        <div class="pcard-facts"><span>East &amp; West Sector</span><span>Possessionable plots</span><span>7 Marla · 10 Marla · 1 Kanal</span></div>
+                        <div class="pcard-actions"><a href="#rudn" class="btn btn-line btn-sm">View Project</a><a href="#payment-plans" data-plan="pp-rudn" class="btn btn-line btn-sm">Payment Plan</a><a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Rudn%20Enclave.">WhatsApp</a></div>
                     </div>
                 </article>
 
                 <article class="pcard">
-                    <div class="pcard-media">
-                        <video autoplay muted loop playsinline preload="none" poster="files/F_height_poster.jpg" style="object-fit:contain">
+                    <div class="pcard-media is-portrait">
+                        <video autoplay muted loop playsinline preload="metadata">
                             <source src="files/F_height.mp4" type="video/mp4">
                         </video>
                         <span class="pcard-tag">Faisal Heights</span>
@@ -1596,37 +1711,23 @@
                     <div class="pcard-body">
                         <h3>Faisal Heights</h3>
                         <div class="pcard-loc">Apartment Plot No. 5, Block-C, Faisal Town Phase 1</div>
-                        <div class="pcard-facts">
-                            <span>Studio – 4 Bed Loft</span>
-                            <span>495 – 3,982 sq.ft</span>
-                            <span>71 monthly installments</span>
-                        </div>
-                        <div class="pcard-actions">
-                            <a href="#heights" class="btn btn-line btn-sm">View Project</a>
-                            <a href="#payment-plans" class="btn btn-line btn-sm">Payment Plan</a>
-                            <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Heights%20apartments.">WhatsApp</a>
-                        </div>
+                        <div class="pcard-facts"><span>Studio – 4 Bed Loft</span><span>495 – 3,982 sq.ft</span><span>71 monthly installments</span></div>
+                        <div class="pcard-actions"><a href="#heights" class="btn btn-line btn-sm">View Project</a><a href="#payment-plans" data-plan="pp-heights" class="btn btn-line btn-sm">Payment Plan</a><a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Heights%20apartments.">WhatsApp</a></div>
                     </div>
                 </article>
 
                 <article class="pcard">
-                    <div class="pcard-media">
-                        <video autoplay muted loop playsinline preload="none" poster="files/F_jewel_poster.jpg" style="object-fit:contain">
+                    <div class="pcard-media is-portrait">
+                        <video autoplay muted loop playsinline preload="metadata">
                             <source src="files/F_jewel.mp4" type="video/mp4">
                         </video>
                         <span class="pcard-tag">Faisal Jewel</span>
                     </div>
                     <div class="pcard-body">
                         <h3>Faisal Jewel</h3>
-                        <div class="pcard-loc">Details on request</div>
-                        <div class="pcard-facts">
-                            <span>Site walkthrough available</span>
-                        </div>
-                        <p style="font-size:13px;color:#a39a8a;margin-bottom:16px">We don't yet have verified plot sizes or a payment plan on file for this project. Ask us directly and we'll confirm current figures with the developer before sharing them.</p>
-                        <div class="pcard-actions">
-                            <a href="#jewel" class="btn btn-line btn-sm">View Project</a>
-                            <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20and%20pricing%20for%20Faisal%20Jewel.">Ask About Faisal Jewel</a>
-                        </div>
+                        <div class="pcard-loc">Walkthrough and details from our team</div>
+                        <div class="pcard-facts"><span>Site walkthrough video</span><span>Details on WhatsApp</span></div>
+                        <div class="pcard-actions"><a href="#jewel" class="btn btn-line btn-sm">View Project</a><a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20about%20Faisal%20Jewel.">WhatsApp</a></div>
                     </div>
                 </article>
 
@@ -1645,24 +1746,14 @@
                 </div>
                 <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Town%20Phase%201.">Ask About This Project</a>
             </div>
-
-            <div class="pd-facts">
-                <div class="pd-fact"><b>A · B · C</b><span>RESIDENTIAL BLOCKS</span></div>
-                <div class="pd-fact"><b>Zedem International</b><span>DEVELOPER</span></div>
-                <div class="pd-fact"><b>N-80 Highway</b><span>MAIN ACCESS ROAD</span></div>
-            </div>
-
-            <p style="max-width:640px;margin-bottom:30px">Faisal Town Phase 1 is developed by Zedem International (Pvt.) Ltd along the Fateh Jang Road, N-80, in Rawalpindi. The master plan sets out residential Blocks A, B and C together with civic and commercial centres, educational institutions, mosques, parks and a hospital site. Faisal Heights apartments (covered separately below) sit within Block C of this phase.</p>
-
+            <div class="pd-facts"><div class="pd-fact"><b>A · B · C</b><span>RESIDENTIAL BLOCKS</span></div><div class="pd-fact"><b>Zedem International</b><span>DEVELOPER</span></div><div class="pd-fact"><b>N-80 Highway</b><span>MAIN ACCESS ROAD</span></div></div>
+            <p class="pd-intro">Faisal Town Phase 1 is developed by Zedem International (Pvt.) Ltd along the Fateh Jang Road, N-80, in Rawalpindi. The master plan sets out residential Blocks A, B and C together with civic and commercial centres, educational institutions, mosques, parks and a hospital site. Faisal Heights apartments (covered separately below) sit within Block C of this phase.</p>
             <div class="video-landscape">
-                <video autoplay muted loop playsinline preload="none" poster="files/FT1_poster.jpg">
+                <video autoplay muted loop playsinline preload="metadata">
                     <source src="files/FT1.mp4" type="video/mp4">
                 </video>
             </div>
-
-            <div class="map-card-actions" style="margin-top:16px">
-                <a href="files/Faisal_Town-I_Master_Plan.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Master Plan (PDF)</a>
-            </div>
+            <div class="pd-actions"><a href="files/Faisal_Town-I_Master_Plan.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Master Plan (PDF)</a></div>
         </div>
     </section>
 
@@ -1677,26 +1768,14 @@
                 </div>
                 <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Town%20Phase%202.">Ask About This Project</a>
             </div>
-
-            <div class="pd-facts">
-                <div class="pd-fact"><b>T · P · N · O,Q&amp;R</b><span>SECTORS &amp; BLOCKS</span></div>
-                <div class="pd-fact"><b>5.56 Marla – 2 Kanal</b><span>PLOT SIZE RANGE</span></div>
-                <div class="pd-fact"><b>120'–180'</b><span>BOULEVARD WIDTHS</span></div>
-                <div class="pd-fact"><b>Residential &amp; Commercial</b><span>PROPERTY TYPES</span></div>
-            </div>
-
-            <p style="max-width:680px;margin-bottom:30px">Faisal Town Phase 2 is laid out across Sector X &amp; Y with a Model Block at its centre and residential Sectors T, P, N and the O, Q &amp; R group around it, plus a dedicated Overseas Enclave and a launched Commercial district along the main boulevards. Full sector and block figures for each are laid out in the Payment Plans section below.</p>
-
+            <div class="pd-facts"><div class="pd-fact"><b>T · P · N · O,Q&amp;R</b><span>SECTORS &amp; BLOCKS</span></div><div class="pd-fact"><b>5.56 Marla – 2 Kanal</b><span>PLOT SIZE RANGE</span></div><div class="pd-fact"><b>120'–180'</b><span>BOULEVARD WIDTHS</span></div><div class="pd-fact"><b>Residential &amp; Commercial</b><span>PROPERTY TYPES</span></div></div>
+            <p class="pd-intro">Faisal Town Phase 2 is laid out across Sector X &amp; Y with a Model Block at its centre and residential Sectors T, P, N and the O, Q &amp; R group around it, plus a dedicated Overseas Enclave and a launched Commercial district along the main boulevards. Full sector and block figures for each are laid out in the Payment Plans section below.</p>
             <div class="video-landscape">
-                <video autoplay muted loop playsinline preload="none" poster="files/FT2_poster.jpg">
+                <video autoplay muted loop playsinline preload="metadata">
                     <source src="files/FT2.mp4" type="video/mp4">
                 </video>
             </div>
-
-            <div class="map-card-actions" style="margin-top:24px">
-                <a href="#payment-plans" class="btn btn-line btn-sm">See Payment Plan Figures</a>
-                <a href="files/SECTOR-X_Y__FT-2__Plans.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Sector X &amp; Y Layout (PDF)</a>
-            </div>
+            <div class="pd-actions"><a href="#payment-plans" data-plan="pp-ft2-t" class="btn btn-navy btn-sm">See Payment Plans</a><a href="files/SECTOR-X%26Y_%28FT-2%29_Plans.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Sector X &amp; Y Layout (PDF)</a></div>
         </div>
     </section>
 
@@ -1711,20 +1790,10 @@
                 </div>
                 <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Hills.">Ask About This Project</a>
             </div>
+            <div class="pd-facts"><div class="pd-fact"><b>Executive · A · B · C · D</b><span>BLOCKS</span></div><div class="pd-fact"><b>Hill View Estate</b><span>+ PRIME BLOCK</span></div><div class="pd-fact"><b>25x50 – 50x90 (2 Kanal)</b><span>PLOT SIZE RANGE</span></div><div class="pd-fact"><b>NOC Approved</b><span>PLOTS</span></div></div>
+            <p class="pd-intro">Faisal Hills sits on the Main GT Road N-5, directly adjacent to the Margalla Hills. The master plan covers the Executive Block, Blocks A, B (with a B-Extension), C and D, the Hill View Estate and the Prime Block, with detailed street-by-street plotting. A dedicated villa product is also available within the project; full figures for both are laid out in the Payment Plans section below.</p>
 
-            <div class="pd-facts">
-                <div class="pd-fact"><b>Executive · A · B · C · D</b><span>BLOCKS</span></div>
-                <div class="pd-fact"><b>Hill View Estate</b><span>+ PRIME BLOCK</span></div>
-                <div class="pd-fact"><b>25x50 – 50x90 (2 Kanal)</b><span>PLOT SIZE RANGE</span></div>
-                <div class="pd-fact"><b>NOC Approved</b><span>PLOTS</span></div>
-            </div>
-
-            <p style="max-width:680px;margin-bottom:30px">Faisal Hills sits on the Main GT Road N-5, directly adjacent to the Margalla Hills. The master plan covers the Executive Block, Blocks A, B (with a B-Extension), C and D, the Hill View Estate and the Prime Block, with detailed street-by-street plotting. A dedicated villa product is also available within the project; full figures for both are laid out in the Payment Plans section below.</p>
-
-            <div class="map-card-actions" style="margin-top:10px">
-                <a href="#payment-plans" class="btn btn-line btn-sm">See Payment Plan Figures</a>
-                <a href="files/FAISAL_HILLS_MASTER_PLAN.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Master Plan (PDF, dated 01-08-2025)</a>
-            </div>
+            <div class="pd-actions"><a href="#payment-plans" data-plan="pp-hills" class="btn btn-navy btn-sm">See Payment Plans</a><a href="files/FAISAL_HILLS_MASTER_PLAN.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Master Plan (PDF, dated 01-08-2025)</a></div>
         </div>
     </section>
 
@@ -1739,20 +1808,14 @@
                 </div>
                 <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Rudn%20Enclave.">Ask About This Project</a>
             </div>
-
-            <div class="pd-facts">
-                <div class="pd-fact"><b>Executive East &amp; West</b><span>SECTORS</span></div>
-                <div class="pd-fact"><b>30x60 – 75x120</b><span>RESIDENTIAL PLOT SIZES</span></div>
-                <div class="pd-fact"><b>Jawa Dam</b><span>+ ENTERTAINMENT ZONE</span></div>
-                <div class="pd-fact"><b>Grand Jamia Mosque</b><span>+ SPORTS ARENA</span></div>
+            <div class="pd-facts"><div class="pd-fact"><b>East &amp; West Sector</b><span>SECTORS</span></div><div class="pd-fact"><b>Possessionable</b><span>READY TO MOVE, READY TO CONSTRUCT</span></div><div class="pd-fact"><b>7 Marla – 1 Kanal</b><span>PRICED PLOT SIZES</span></div><div class="pd-fact"><b>30% Down Payment</b><span>+ 18 MONTHLY INSTALLMENTS</span></div></div>
+            <p class="pd-intro">Rudn Enclave offers possessionable plots in its East and West Sectors, ready to move and ready to construct. The Executive Block map covers Sectors A through D, a sports arena, an entertainment zone along Jawa Dam and two grand mosques, connected to the Main Kutba Road, alongside dedicated commercial, park, school and future extension zones.</p>
+            <div class="video-landscape">
+                <video autoplay muted loop playsinline preload="metadata">
+                    <source src="files/Ruden_enclave.mp4" type="video/mp4">
+                </video>
             </div>
-
-            <p style="max-width:680px;margin-bottom:8px">The Executive Block map covers Sectors A through D, the Executive East and West Sectors, a sports arena, entertainment zone along Jawa Dam and two grand mosques, connected to the Main Kutba Road. Residential plots range from 30x60 to 75x120, alongside dedicated commercial, park, school and future extension zones.</p>
-            <div class="reveal-note" style="max-width:680px;margin-bottom:26px">We currently have the Executive Block map for Rudn Enclave on file. A dedicated payment plan document was not supplied for this project, so no pricing is shown here. Ask us directly for the latest confirmed figures.</div>
-
-            <div class="map-card-actions" style="margin-top:10px">
-                <a href="files/Executive_Block_Complete_Map_Updated_28-August-2026_.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Executive Block Map (PDF, updated 28 Aug 2026)</a>
-            </div>
+            <div class="pd-actions"><a href="#payment-plans" data-plan="pp-rudn" class="btn btn-navy btn-sm">See Payment Plans</a><a href="files/Executive%20Block%20Complete%20Map%20Updated%2028-August-2026%20.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Executive Block Map (PDF, updated 28 Aug 2026)</a></div>
         </div>
     </section>
 
@@ -1767,70 +1830,50 @@
                 </div>
                 <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20details%20about%20Faisal%20Heights%20apartments.">Ask About This Project</a>
             </div>
-
-            <div class="pd-facts">
-                <div class="pd-fact"><b>Studio – 4 Bed Loft</b><span>UNIT TYPES</span></div>
-                <div class="pd-fact"><b>495 – 3,982 sq.ft</b><span>SIZE RANGE</span></div>
-                <div class="pd-fact"><b>Zedem International</b><span>DEVELOPER</span></div>
-                <div class="pd-fact"><b>71 Installments</b><span>+ 25% DOWN PAYMENT</span></div>
-            </div>
-
-            <p style="max-width:680px;margin-bottom:30px">Faisal Heights is an apartment tower on Apartment Plot No. 5 in Block-C of Faisal Town Phase 1. Units range from studios through to four-bedroom lofts, sold at a fixed per-square-foot rate with a 25% down payment and 71 monthly installments. Full apartment floor plans are available in the original developer document below.</p>
-
+            <div class="pd-facts"><div class="pd-fact"><b>Studio – 4 Bed Loft</b><span>UNIT TYPES</span></div><div class="pd-fact"><b>495 – 3,982 sq.ft</b><span>SIZE RANGE</span></div><div class="pd-fact"><b>Zedem International</b><span>DEVELOPER</span></div><div class="pd-fact"><b>71 Installments</b><span>+ 25% DOWN PAYMENT</span></div></div>
+            <p class="pd-intro">Faisal Heights is an apartment tower on Apartment Plot No. 5 in Block-C of Faisal Town Phase 1. Units range from studios through to four-bedroom lofts, sold at a fixed per-square-foot rate with a 25% down payment and 71 monthly installments. Full apartment floor plans are available in the original developer document below.</p>
             <div class="video-feature">
                 <div class="video-landscape is-portrait">
-                    <video autoplay muted loop playsinline preload="none" poster="files/F_height_poster.jpg">
+                    <video autoplay muted loop playsinline preload="metadata">
                         <source src="files/F_height.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-feature-aside">
-                    <h4>Why buyers choose Faisal Heights</h4>
-                    <div class="video-feature-list">
-                        <div><b>32 unit sizes</b><span>Studio, 1, 2 and 3 Bed, plus 3 and 4 Bed Lofts</span></div>
-                        <div><b>Fixed rate</b><span>Price locked per square foot, no hidden escalation</span></div>
-                        <div><b>25% down</b><span>Balance spread over 71 easy monthly installments</span></div>
-                        <div><b>Block-C</b><span>Inside Faisal Town Phase 1, Main Fateh Jang Road</span></div>
-                    </div>
-                    <a href="#payment-plans" class="btn btn-gold btn-sm">See Payment Plan Table</a>
+                    <h4>Plan at a glance</h4>
+                    <div class="video-feature-list"><div><b>32 unit sizes</b><span>Studio, 1, 2 and 3 Bed, plus 3 and 4 Bed Lofts</span></div><div><b>Fixed rate</b><span>Priced per square foot at the rate shown in the payment plan</span></div><div><b>25% down</b><span>Balance spread over 71 monthly installments</span></div><div><b>Block-C</b><span>Inside Faisal Town Phase 1, Main Fateh Jang Road</span></div></div>
+                    <a href="#payment-plans" data-plan="pp-heights" class="btn btn-gold btn-sm">See Payment Plan Table</a>
                 </div>
             </div>
-
-            <div class="map-card-actions" style="margin-top:16px">
-                <a href="files/Apartments_Plan_only_-_Faisal_Heights.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Apartment Floor Plans (PDF)</a>
-            </div>
+            <div class="pd-actions"><a href="#payment-plans" data-plan="pp-heights" class="btn btn-navy btn-sm">See Payment Plans</a><a href="files/Apartments%20Plan%20only%20-%20Faisal%20Heights.pdf" target="_blank" class="btn btn-ghost btn-sm">Open Full Apartment Floor Plans (PDF)</a></div>
         </div>
     </section>
 
     <!-- ============ FAISAL JEWEL ============ -->
-    <section class="pd" id="jewel">
+    <section class="pd paper-dim" id="jewel">
         <div class="wrap">
             <div class="pd-head">
                 <div>
                     <span class="eyebrow-plain">Project Detail</span>
                     <h2>Faisal Jewel</h2>
-                    <div class="loc">Full location and plot details on request</div>
+                    <div class="loc">Walkthrough and details from our team</div>
                 </div>
-                <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20and%20pricing%20for%20Faisal%20Jewel.">Ask About This Project</a>
+                <a class="btn btn-navy" target="_blank" rel="noopener" href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20about%20Faisal%20Jewel.">Ask About This Project</a>
             </div>
 
-            <div class="reveal-note" style="max-width:680px;margin-bottom:30px">We don't yet have verified plot sizes, blocks or a payment plan on file for Faisal Jewel. A site walkthrough is available on request, and we'll confirm current figures directly with the developer before sharing them, the same as every other figure on this site.</div>
-
+            <p class="pd-intro">Faisal Jewel is presented here through its site walkthrough. For current sizes, availability and pricing, speak to our team directly.</p>
             <div class="video-feature">
                 <div class="video-landscape is-portrait">
-                    <video autoplay muted loop playsinline preload="none" poster="files/F_jewel_poster.jpg">
+                    <video autoplay muted loop playsinline preload="metadata">
                         <source src="files/F_jewel.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-feature-aside">
-                    <h4>What we can confirm today</h4>
-                    <div class="video-feature-list">
-                        <div><b>Site footage</b><span>Walkthrough video filmed on site, shown here in full</span></div>
-                        <div><b>Details on request</b><span>Plot sizes and blocks confirmed directly with our team</span></div>
-                        <div><b>No pricing yet</b><span>Payment plan not yet released by the developer</span></div>
-                    </div>
-                    <a href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20and%20pricing%20for%20Faisal%20Jewel." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Ask About Faisal Jewel</a>
+                    <h4>Explore Faisal Jewel</h4>
+                    <div class="video-feature-list"><div><b>Walkthrough</b><span>Site footage plays alongside this summary</span></div><div><b>Enquiries</b><span>Call or WhatsApp for current sizes, availability and pricing</span></div></div>
+                    <a href="https://wa.me/923399992222?text=Hello%20Zameen%20Dost%20Group%2C%20I%20would%20like%20current%20details%20about%20Faisal%20Jewel." target="_blank" rel="noopener" class="btn btn-gold btn-sm">WhatsApp About Faisal Jewel</a>
                 </div>
             </div>
+            <div class="pd-actions"></div>
         </div>
     </section>
 
@@ -1852,6 +1895,7 @@
                 <button data-target="pp-ft2-commercial">FT2 · Commercial</button>
                 <button data-target="pp-hills">Faisal Hills</button>
                 <button data-target="pp-hills-villas">Faisal Hills Villas</button>
+                <button data-target="pp-rudn">Rudn Enclave</button>
                 <button data-target="pp-heights">Faisal Heights</button>
             </div>
 
@@ -2025,11 +2069,30 @@
                 <p class="table-note">Covered area: 2,282 sq.ft. Storeys: Ground + 1 + Mumty. Unit type: Double villa.</p>
             </div>
 
+            <!-- RUDN ENCLAVE -->
+            <div class="plan-block" id="pp-rudn">
+                <div class="plan-block-head">
+                    <h4 style="color:#fff">Rudn Enclave: East &amp; West Sector, Possessionable Plots</h4>
+                    <a href="files/RE_plan.jpg" target="_blank" class="btn btn-line btn-sm">View Original Plan</a>
+                </div>
+                <div class="table-scroll">
+                    <table class="ptable">
+                        <thead><tr><th>Plot Size</th><th>Plot Value</th><th>Down Payment (30%)</th><th>18 Monthly Installments</th><th>Possession Charges (20%)</th></tr></thead>
+                        <tbody>
+                            <tr><td>7 Marla</td><td>4,200,000</td><td>1,260,000</td><td>116,667</td><td>840,000</td></tr>
+                            <tr><td>10 Marla</td><td>5,500,000</td><td>1,650,000</td><td>152,778</td><td>1,100,000</td></tr>
+                            <tr><td>1 Kanal</td><td>9,500,000</td><td>2,850,000</td><td>263,889</td><td>1,900,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">Ready to move, ready to construct. A 10% overall discount applies when 100% is paid as a lump sum. Installments are due by the 10th of each month. A 10% category charge applies to single-category plots (corner, park facing, boulevard, etc.). Cheques, pay order or demand draft in favour of RUDN Enclave. Plans and prices are subject to change without notice.</p>
+            </div>
+
             <!-- FAISAL HEIGHTS -->
             <div class="plan-block" id="pp-heights">
                 <div class="plan-block-head">
                     <h4 style="color:#fff">Faisal Heights: Apartment Payment Plan</h4>
-                    <a href="files/Apartments_Plan_only_-_Faisal_Heights.pdf" target="_blank" class="btn btn-line btn-sm">View Original Floor Plans</a>
+                    <a href="files/Apartments%20Plan%20only%20-%20Faisal%20Heights.pdf" target="_blank" class="btn btn-line btn-sm">View Original Floor Plans</a>
                 </div>
                 <div class="table-scroll">
                     <table class="ptable">
@@ -2052,7 +2115,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="table-note">This is a representative selection from the full size list (32 unit sizes across Studio, 1/2/3 Bed, 3 Bed Loft and 4 Bed Loft). Open the original floor plan document above for every size and the exact unit layout.</p>
+                <p class="table-note">Selected sizes are shown. The full list of 32 unit sizes and every unit layout are in the original floor plan document above.</p>
             </div>
 
             <div class="inline-cta">
@@ -2157,7 +2220,7 @@
                     <a class="btn btn-gold" href="tel:+923399992222">Call +92 339 9992222</a>
                     <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/923399992222">WhatsApp Us</a>
                 </div>
-                <p style="font-size:12.5px;color:#a39a8a">Office address and email are not listed here yet. Call or WhatsApp is the fastest way to reach us.</p>
+                <p style="font-size:12.5px;color:#a39a8a">Call or WhatsApp is the fastest way to reach us.</p>
             </div>
 
             <form id="inquiryForm" onsubmit="return handleSubmit(event)">
@@ -2225,6 +2288,7 @@
                         <li><a href="#hills">Faisal Hills</a></li>
                         <li><a href="#rudn">Rudn Enclave</a></li>
                         <li><a href="#heights">Faisal Heights</a></li>
+                        <li><a href="#jewel">Faisal Jewel</a></li>
                     </ul>
                 </div>
                 <div>
@@ -2259,13 +2323,6 @@
         </div>
     </div>
 
-    <!-- ============ LIGHTBOX ============ -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-        <img id="lightboxImg" src="" alt="">
-        <div class="lightbox-cap" id="lightboxCap"></div>
-    </div>
-
     <script>
         // Mobile menu
         const mobileToggle = document.getElementById('mobileToggle');
@@ -2296,22 +2353,8 @@
             document.getElementById(b.dataset.target).scrollIntoView({ behavior: 'smooth', block: 'start' });
         }));
         showPlan('pp-ft2-t');
-
-        // Lightbox
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const lightboxCap = document.getElementById('lightboxCap');
-        function openLightboxImg(el) {
-            const src = el.dataset.img;
-            const cap = el.dataset.cap || '';
-            lightboxImg.src = src;
-            lightboxCap.textContent = cap;
-            lightbox.classList.add('open');
-        }
-        document.querySelectorAll('.plan-thumb').forEach(t => t.addEventListener('click', () => openLightboxImg(t)));
-        document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
-        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+        // Project buttons open the matching payment plan tab
+        document.querySelectorAll('[data-plan]').forEach(a => a.addEventListener('click', () => showPlan(a.dataset.plan)));
 
         // Locator
         const locatorItems = document.querySelectorAll('.locator-item');
@@ -2342,7 +2385,8 @@
         // Contextual WhatsApp text per project card is already baked into hrefs above.
 
         // Lazy-play: pause off-screen videos to save bandwidth, resume autoplay when back in view
-        const lazyVideos = document.querySelectorAll('.pcard-media video');
+        const lazyVideos = document.querySelectorAll('video');
+        lazyVideos.forEach(v => { v.muted = true; v.loop = true; v.playsInline = true; v.controls = false; });
         const io = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) { entry.target.play().catch(() => { }); }
